@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madurankuliya Sri Saranankararama Mihindu Perahera 2026 | මදුරන්කුලිය ශ්‍රී සරණංකරාරාම මිහිඳු මහා පෙරහැර</title>
+    <meta name="description" content="Official website for Madurankuliya Sri Saranankararama Mihindu Perahera 2026. Explore the historical, cultural pageant, view image galleries, Perahera schedule, and route map.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Cinzel:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Gate Screen / Elegant Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="lamp-container">
+                <!-- SVG oil lamp drawing -->
+                <svg viewBox="0 0 100 100" class="oil-lamp">
+                    <path class="lamp-base" d="M20 70 C20 70, 50 85, 80 70 C80 50, 20 50, 20 70 Z" fill="none" stroke="#d4af37" stroke-width="3"/>
+                    <path class="lamp-stand" d="M45 78 L45 88 L35 88 L35 92 L65 92 L65 88 L55 88 L55 78" fill="none" stroke="#d4af37" stroke-width="3"/>
+                    <path class="wick" d="M50 50 L50 42" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                    <path class="flame" d="M50 40 C45 35, 45 25, 50 15 C55 25, 55 35, 50 40 Z" fill="#ff9900"/>
+                </svg>
+            </div>
+            <h2 class="preloader-title">සාදරයෙන් පිළිගනිමු</h2>
+            <p class="preloader-subtitle">Madurankuliya Sri Saranankararama Viharaya</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Traditional Audio Button -->
+    <div class="audio-control" id="audio-toggle-btn" title="Traditional Background Sound">
+        <i class="fas fa-music"></i>
+        <span>නද/හේවිසි</span>
+        <audio id="bg-audio" loop src="https://assets.mixkit.co/active_storage/sfx/2568/2568-84.wav"></audio> <!-- Fallback simple chime/drum effect, can be played on interaction -->
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo-area">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 50 50" class="lotus-logo">
+                        <path d="M25 5 C22 15, 15 20, 25 45 C35 20, 28 15, 25 5 Z" fill="#d4af37"/>
+                        <path d="M25 15 C15 22, 10 32, 25 45 C40 32, 35 22, 25 15 Z" fill="#b59123" opacity="0.8"/>
+                        <path d="M25 25 C8 30, 8 40, 25 45 C42 40, 42 30, 25 25 Z" fill="#937213" opacity="0.6"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="sin-title">ශ්‍රී සරණංකරාරාමය</span>
+                    <span class="eng-title">SRI SARANANKARARAMAYA</span>
+                </div>
+            </a>
+
+            <!-- Mobile Hamburger Menu Button -->
+            <button class="nav-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="active">මුල් පිටුව <span class="en-nav">Home</span></a></li>
+                    <li><a href="#about">විහාර ඉතිහාසය <span class="en-nav">History</span></a></li>
+                    <li><a href="#pageant">සංස්කෘතිකාංග <span class="en-nav">Pageant</span></a></li>
+                    <li><a href="#reflections">ශාසනික සිතුවිලි <span class="en-nav">Reflections</span></a></li>
+                    <li><a href="#gallery">මාධ්‍ය ගැලරිය <span class="en-nav">Media</span></a></li>
+                    <li><a href="#route">කාලසටහන <span class="en-nav">Schedule</span></a></li>
+                    <li><a href="#contact">සබඳතා <span class="en-nav">Contact</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Slideshow Background -->
+    <section id="hero" class="hero-section">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: linear-gradient(rgba(26, 15, 16, 0.4), rgba(17, 8, 9, 0.85)), url('4 Karaduwa Vadammana Hasthi Rajaya.jpg');"></div>
+            <div class="slide" style="background-image: linear-gradient(rgba(26, 15, 16, 0.4), rgba(17, 8, 9, 0.85)), url('2 Pantheru Natuma.jpg');"></div>
+            <div class="slide" style="background-image: linear-gradient(rgba(26, 15, 16, 0.4), rgba(17, 8, 9, 0.85)), url('1 Horane karuvan.jpg');"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="decoration-top">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' fill='%23d4af37'><path d='M0,10 Q25,0 50,10 T100,10 L100,20 L0,20 Z' opacity='0.7'/><path d='M0,15 Q25,5 50,15 T100,15 L100,20 L0,20 Z'/></svg>" alt="Traditional Border" class="border-motif">
+            </div>
+            
+            <p class="hero-year-badge">76 වන පෙරහැර | 2026</p>
+            
+            <h1 class="hero-main-title">
+                <span class="line-1">මදුරන්කුලිය ශ්‍රී සරණංකරාරාම</span>
+                <span class="line-2">ඓතිහාසික 76 වන අනුබුදු මිහිඳු මහා පෙරහැර</span>
+                <span class="line-en">Madurankuliya Sri Saranankararama 76th Mihindu Perahera</span>
+            </h1>
+
+            <p class="hero-desc">
+                ශාසනික සහ සංස්කෘතික උරුමයන් සුරකිමින්, මිහිඳු මහ රහතන් වහන්සේගේ ලංකාගමනය සිහිපත් කරමින් 76 වන වරටත් පවත්වනු ලබන මදුරන්කුලියේ මහා සංස්කෘතික මංගල්‍යය.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#gallery" class="btn btn-primary"><i class="fas fa-images"></i> ගැලරිය නරඹන්න <span class="btn-sub">View Gallery</span></a>
+                <a href="#route" class="btn btn-secondary"><i class="fas fa-calendar-alt"></i> කාලසටහන <span class="btn-sub">Schedule</span></a>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>පහළට <br> Scroll</span>
+                <i class="fas fa-chevron-down animate-bounce"></i>
+            </div>
+        </div>
+        
+        <!-- Bottom Wave Border -->
+        <div class="hero-bottom-curve">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z" fill="#1a0f10"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Dhamma Quote / Traditional Intro Banner -->
+    <section class="blessing-banner">
+        <div class="container text-center">
+            <h3 class="blessing-text">"සබ්බදානං ධම්මදානං ජිනාති"</h3>
+            <p class="blessing-translation">සියලු දානයන් අතරින් ධර්ම දානය උතුම් වන්නේය.</p>
+            <div class="floral-separator">
+                <span class="dot"></span>
+                <span class="leaf left"></span>
+                <span class="center-flower">✿</span>
+                <span class="leaf right"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text-content">
+                    <div class="section-title-area">
+                        <span class="sub-title">ඓතිහාසික පසුබිම | Historical Significance</span>
+                        <h2 class="section-title">මිහිඳු පෙරහැරේ ශාසනික වටිනාකම</h2>
+                        <div class="title-line"></div>
+                    </div>
+                    
+                    <p class="highlighted-para">
+                        අනුබුදු මිහිඳු මහා රහතන් වහන්සේගේ ලංකාගමනයත් සමඟ මෙරට ඇති වූ ආගමික හා සාමාජීය විප්ලවය අනුස්මරණය කරනු වස් වාර්ෂිකව මදුරන්කුලිය ශ්‍රී සරණංකරාරාම විහාරස්ථානයේ දී මෙම පුණ්‍ය මහෝත්සවය 76 වන වරටත් උත්කර්ෂවත් ලෙස සංවිධානය කෙරේ.
+                    </p>
+
+                    <p>
+                        මදුරන්කුලිය ප්‍රදේශයට දිගු ඉතිහාසයක් හිමි අතර, ශ්‍රී සරණංකරාරාම විහාරස්ථානය ප්‍රදේශයේ බොදු ජනතාවගේ මුදුන් මල්කඩක් බඳු පූජනීය ස්ථානයකි. මෙම ඓතිහාසික පුණ්‍ය මහෝත්සවය, විහාරාධිපති <strong>පූජ්‍ය මහකුඹුක්කඩවල සිරිනන්ද හිමිපාණන් වහන්සේගේ</strong> අනුශාසනාව යටතේ සරණංකර දායක සභාව මඟින් සංවිධානය කරනු ලබයි.
+                    </p>
+
+                        <div class="temple-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-dharmachakra"></i></div>
+                            <div class="feature-desc">
+                                <h4>බෞද්ධ පුනර්ජීවනය</h4>
+                                <p>ප්‍රදේශයේ ධර්ම ප්‍රචාරක කටයුතු හා ආගමික හැදියාව නංවාලීම.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-drum"></i></div>
+                            <div class="feature-desc">
+                                <h4>හෙළ උරුමය</h4>
+                                <p>උඩරට, පහතරට සහ සබරගමු සාම්ප්‍රදායික නර්තන කලාව සුරැකීම.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image-card">
+                    <div class="gold-frame">
+                        <img src="23 Madurankuliya viharastaanaya.jpg" alt="Sri Saranankararamaya Temple Viharaya" class="about-img">
+                        <div class="frame-corner top-left"></div>
+                        <div class="frame-corner top-right"></div>
+                        <div class="frame-corner bottom-left"></div>
+                        <div class="frame-corner bottom-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pageant Lineup (Cultural Components) -->
+    <section id="pageant" class="pageant-section">
+        <div class="container">
+            <div class="section-title-area text-center">
+                <span class="sub-title">පෙරහැර මංගල්‍යයේ අංග | The Pageant Elements</span>
+                <h2 class="section-title">මහා සංස්කෘතික පෙරහැරේ පෙළගැස්ම</h2>
+                <div class="title-line center"></div>
+            </div>
+
+            <div class="pageant-grid">
+                <!-- Card 1: Hewisi karuvan -->
+                <div class="pageant-card">
+                    <div class="card-image" style="background-image: url('1 Horane karuvan.jpg');">
+                        <div class="card-overlay"></div>
+                        <div class="card-icon"><i class="fas fa-drum"></i></div>
+                    </div>
+                    <div class="card-content" style="text-align: center; padding: 25px 20px 20px;">
+                        <h4 style="font-family: var(--font-heading-si); color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">හේවිසි කරුවන්</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Hewisi Musicians</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Maha Sangarathnaya -->
+                <div class="pageant-card">
+                    <div class="card-image" style="background-image: url('18 Maha Sangarathnaya saha Nilamevarun.jpg');">
+                        <div class="card-overlay"></div>
+                        <div class="card-icon"><i class="fas fa-hands"></i></div>
+                    </div>
+                    <div class="card-content" style="text-align: center; padding: 25px 20px 20px;">
+                        <h4 style="font-family: var(--font-heading-si); color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">විහාරාධිපති හිමි ඇතුළු මහා සංඝරත්නය</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Maha Sangha & Monks</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Casket Bearing Elephant -->
+                <div class="pageant-card highlight">
+                    <div class="card-image" style="background-image: url('4 Karaduwa Vadammana Hasthi Rajaya.jpg');">
+                        <div class="card-overlay"></div>
+                        <span class="featured-badge">පෙරහැර</span>
+                        <div class="card-icon"><i class="fas fa-sun"></i></div>
+                    </div>
+                    <div class="card-content" style="text-align: center; padding: 25px 20px 20px;">
+                        <h4 style="font-family: var(--font-heading-si); color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">කරඬුව වැඩමවන හස්ති රාජයා</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Casket Bearing Elephant</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Traditional Male Dancers -->
+                <div class="pageant-card">
+                    <div class="card-image" style="background-image: url('5 Udarata Ves Narthanaya.jpg');">
+                        <div class="card-overlay"></div>
+                        <div class="card-icon"><i class="fas fa-walking"></i></div>
+                    </div>
+                    <div class="card-content" style="text-align: center; padding: 25px 20px 20px;">
+                        <h4 style="font-family: var(--font-heading-si); color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">උඩරට නර්තන ශිල්පීන්</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Kandyan Dancers</p>
+                    </div>
+                </div>
+
+                <!-- Card 5: Kulu Natuma -->
+                <div class="pageant-card">
+                    <div class="card-image" style="background-image: url('7 Kulu Natuma.jpg');">
+                        <div class="card-overlay"></div>
+                        <div class="card-icon"><i class="fas fa-users"></i></div>
+                    </div>
+                    <div class="card-content" style="text-align: center; padding: 25px 20px 20px;">
+                        <h4 style="font-family: var(--font-heading-si); color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">කුළු නැටුම</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Traditional Kulu Dance</p>
+                    </div>
+                </div>
+
+                <!-- Card 6: Fire Dancers -->
+                <div class="pageant-card">
+                    <div class="card-image" style="background-image: url('9 Giniboolakaruvan.jpg');">
+                        <div class="card-overlay"></div>
+                        <div class="card-icon"><i class="fas fa-fire"></i></div>
+                    </div>
+                    <div class="card-content" style="text-align: center; padding: 25px 20px 20px;">
+                        <h4 style="font-family: var(--font-heading-si); color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">ගිනි බෝල කරුවන්</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Fireball Dancers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section: Spiritual Reflections & Announcements -->
+    <section id="reflections" class="reflections-section">
+        <div class="container">
+            <div class="section-title-area text-center">
+                <span class="sub-title">පෙරහැර ධර්ම සන්නිවේදනය | Spiritual Messages</span>
+                <h2 class="section-title">මිහිඳු පෙරහැර විභූතියේ ශාසනික පණිවිඩ</h2>
+                <div class="title-line center"></div>
+            </div>
+
+            <div class="reflections-grid">
+                <!-- Reflection 1 -->
+                <div class="reflection-card">
+                    <div class="reflection-card-header">
+                        <div class="reflection-num">1</div>
+                        <h4>පූර්ව ආරාධනාව සහ තෙරුවන් සරණ <span class="en-ref-title">Morning Blessing & Invitation</span></h4>
+                    </div>
+                    <p class="reflection-body-text">පොසොන් පොහෝ දින තෙරුවන් සරණ පතමින්, 76 වන මිහිඳු පෙරහැරේ ශාසනික වැදගත්කම සිහිපත් කිරීම. අකුසලයෙන් වැළකී කුසල් රැස් කිරීම බුදුවදනයි.</p>
+                    <p class="reflection-body-text en">“Sabbapāpassa akaraṇaṁ, kusalassa upasampadā” – Avoid all evil, cultivate the good. Come with faith to witness the noble cultural procession starting at 7 PM.</p>
+                </div>
+
+                <!-- Reflection 2 -->
+                <div class="reflection-card">
+                    <div class="reflection-card-header">
+                        <div class="reflection-num">2</div>
+                        <h4>අනුබුදු මිහිඳු හිමියන්ගේ ලංකාගමනය <span class="en-ref-title">Remembering Arahant Mahinda</span></h4>
+                    </div>
+                    <p class="reflection-body-text">මිහින්තලා පුදබිමේදී දේවානම්පියතිස්ස රජතුමා මුණගැසී ලක්දිව ඉතිහාසය වෙනස් කළ අනුබුදු මිහිඳු මහා රහතන් වහන්සේගේ ඥානාන්විත දේශනය සිහිපත් කිරීම.</p>
+                    <p class="reflection-body-text en">Remembering Arahant Mahinda Thero who brought wisdom and peace. “Appamādo amatapadaṁ” – Heedfulness is the path to the deathless.</p>
+                </div>
+
+                <!-- Reflection 3 -->
+                <div class="reflection-card">
+                    <div class="reflection-card-header">
+                        <div class="reflection-num">3</div>
+                        <h4>පොසොන් පොහෝ දින අර්ථය <span class="en-ref-title">Poson Day Meaning</span></h4>
+                    </div>
+                    <p class="reflection-body-text">ලක්දිවට බුදුදහම උරුම කරදුන් පොසොන් පොහෝ දිනයේ ශාසනික පුනරුදය සැමරීම. ධර්මය රකින්නා ධර්මය විසින්ම රකිනු ලබයි.</p>
+                    <p class="reflection-body-text en">“Dhammo have rakkhati dhammacāriṁ” – The Dhamma protects those who live by it. Poson marks our cultural heartbeat and spiritual awakening.</p>
+                </div>
+
+                <!-- Reflection 4 -->
+                <div class="reflection-card">
+                    <div class="reflection-card-header">
+                        <div class="reflection-num">4</div>
+                        <h4>විහාරස්ථ ශාසනික උරුමය <span class="en-ref-title">Temple Heritage</span></h4>
+                    </div>
+                    <p class="reflection-body-text">ශ්‍රී සරණංකරාරාම විහාරස්ථානය දශක ගණනාවක් පුරා බොදු ජනතාවගේ ශාසනික පහන් ටැඹක් ලෙස කටයුතු කරමින් හෙළ උරුමය සුරැකීමට දරන උත්සාහය.</p>
+                    <p class="reflection-body-text en">Sri Saranankararamaya stands as a beacon of devotion. “Saṅghassa dānaṁ mahapphalaṁ” – Giving to the Sangha brings great merit.</p>
+                </div>
+
+                <!-- Reflection 5 -->
+                <div class="reflection-card">
+                    <div class="reflection-card-header">
+                        <div class="reflection-num">5</div>
+                        <h4>සාමාජීය සාමය සහ සමඟිය <span class="en-ref-title">Community Spirit</span></h4>
+                    </div>
+                    <p class="reflection-body-text">සමඟිය උතුම්ම ආශිර්වාදයයි. මදුරන්කුලිය බොදු ජනතාව වසර 76ක් පුරා මෙම උදාර පෙරහැර පවත්වමින් සාමාජීය සමඟිය තහවුරු කරයි.</p>
+                    <p class="reflection-body-text en">Teachings of the Buddha encourage harmony: “Concord is the highest blessing.” Upholding 76 years of proud village tradition.</p>
+                </div>
+
+                <!-- Reflection 6 -->
+                <div class="reflection-card">
+                    <div class="reflection-card-header">
+                        <div class="reflection-num">6</div>
+                        <h4>පෙරහැර සංස්කෘතික විචිත්‍රත්වය <span class="en-ref-title">About the Perahera Events</span></h4>
+                    </div>
+                    <p class="reflection-body-text">ගිනි බෝල, සැරසූ පාපැදි, උඩරට පහතරට නර්තනයන්ගෙන් විචිත්‍රවත් වන පෙරහැර මංගල්‍යය. සන්සුන් කළ මනස සැපත උදා කරයි.</p>
+                    <p class="reflection-body-text en">“Cittaṁ dantaṁ sukhāvahaṁ” – A well-trained mind brings happiness. Dazzling fireball displays, school bicycles, and dancers adorn the streets.</p>
+                </div>
+
+                <!-- Reflection 7 -->
+                <div class="reflection-card">
+                    <div class="reflection-card-header">
+                        <div class="reflection-num">7</div>
+                        <h4>ළමා පරපුර බොදු මඟට යොමු කිරීම <span class="en-ref-title">Poson Blessings for Children</span></h4>
+                    </div>
+                    <p class="reflection-body-text">පාසල් දරුවන් සැරසූ පාපැදි මඟින් පෙරහැර අලංකාර කරමින් හෙළ සංස්කෘතික දායාදය ඊළඟ පරපුරට උරුම කරදීම.</p>
+                    <p class="reflection-body-text en">“Sīlaṁ rakkhati sobhanaṁ” – Virtue protects the beautiful. Local school children participate with decorated bicycles, bridging generations.</p>
+                </div>
+
+                <!-- Reflection 8 -->
+                <div class="reflection-card">
+                    <div class="reflection-card-header">
+                        <div class="reflection-num">8</div>
+                        <h4>ධර්මාශෝක රජුගේ ධර්ම දූත සේවය <span class="en-ref-title">Emperor Dharmashoka & Peace</span></h4>
+                    </div>
+                    <p class="reflection-body-text">යුධ ජයග්‍රහණයෙන් පසු ධර්ම විජය ඔස්සේ ලොවට සාමය බෙදාහැර අනුබුදු මිහිඳු හිමියන් මෙරටට එවූ ධර්මාශෝක අධිරාජයාගේ දූත මෙහෙවර සිහිපත් කිරීම.</p>
+                    <p class="reflection-body-text en">“Na hi verena verāni” – Hatred is never appeased by hatred. The Perahera is a pilgrimage from noise to stillness, celebrating the gift of Dhamma.</p>
+                </div>
+
+                <!-- Reflection 9 -->
+                <div class="reflection-card">
+                    <div class="reflection-card-header">
+                        <div class="reflection-num">9</div>
+                        <h4>එදිනෙදා ජීවිතයට බුදු දහම <span class="en-ref-title">Dharma for Daily Life</span></h4>
+                    </div>
+                    <p class="reflection-body-text">මිහිඳු පෙරහැර නැරඹීමෙන් පමණක් නොව, බුදුදහමේ ඉගැන්වීම් එදිනෙදා ජීවිතයට ගලපාගෙන ධාර්මිකව ජීවත්වීම උතුම් වේ.</p>
+                    <p class="reflection-body-text en">“Matta-sukhapariccāgā, passe ce vipulaṁ sukhaṁ” – If by giving up a small pleasure one sees greater joy, one should let go and live righteously.</p>
+                </div>
+
+                <!-- Reflection 10 -->
+                <div class="reflection-card">
+                    <div class="reflection-card-header">
+                        <div class="reflection-num">10</div>
+                        <h4>බැතිමතුන්ට අවසන් මතක් කිරීම <span class="en-ref-title">Final Call to Devotees</span></h4>
+                    </div>
+                    <p class="reflection-body-text">තෙරුවන් සරණ යමින්, මෙත් සිතින් හා බුද්ධ භක්තියෙන් යුතුව පෙරහැර වීදි සංචාරය කරන මංගල පෙරහැර සාධුකාර මධ්‍යයේ පිළිගැනීම.</p>
+                    <p class="reflection-body-text en">“Buddhaṁ saraṇaṁ gacchāmi” – Let us take refuge in the Buddha. Stand along roadsides with flowers and metta in your hearts to welcome the Perahera.</p>
+                </div>
+            </div>
+
+            <!-- Devotees Public Requests Box -->
+            <div class="requests-banner">
+                <h3>මහජනතාවගෙන් කාරුණික ඉල්ලීම්</h3>
+                <span class="en-title">Respectful Requests to the Public</span>
+                
+                <div class="requests-list">
+                    <div class="request-item">
+                        <div class="request-badge">1</div>
+                        <div class="request-text">
+                            <h5>මාර්ග සහ පදික වේදිකා නිදහස්ව තැබීම</h5>
+                            <p>ඓතිහාසික පෙරහැර මංගල්‍යය සුමටව ගමන් කිරීම සඳහා මාර්ග සහ පදික වේදිකා නිදහස්ව තබන්න.</p>
+                            <p class="en">Kindly make space along the roads and pavements to allow the procession to pass smoothly and peacefully.</p>
+                        </div>
+                    </div>
+
+                    <div class="request-item">
+                        <div class="request-badge">2</div>
+                        <div class="request-text">
+                            <h5>නර්තන ශිල්පීන්ට ඉඩ සැලසීම</h5>
+                            <p>අවුරුදු 76ක ඓතිහාසික පෙරහැරේ නර්තන ශිල්පීන්ට, කලාකරුවන්ට සහ අලි ඇතුන්ට බාධාවකින් තොරව ගමන් කිරීමට ඉඩ ලබා දෙන්න.</p>
+                            <p class="en">Kindly ask families and children to step aside and make way for dancers, elephants, and performers.</p>
+                        </div>
+                    </div>
+
+                    <div class="request-item">
+                        <div class="request-badge">3</div>
+                        <div class="request-text">
+                            <h5>ගෞරවාන්විතව රැඳී සිටීම</h5>
+                            <p>පෙරහැර සවස 7.00 ට විහාරස්ථාන භූමියෙන් ආරම්භ වන බැවින් කල්වේලා ඇතිව මඟ දෙපස ගෞරවාන්විතව රැඳී සිටින්න.</p>
+                            <p class="en">Please cooperate by giving enough space, keeping the roads clear, and standing respectfully to witness this sacred journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Gallery & Video Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-title-area text-center">
+                <span class="sub-title">ඡායාරූප සහ වීඩියෝ | Media Hub</span>
+                <h2 class="section-title">ඓතිහාසික පෙරහැර මතකයන්</h2>
+                <div class="title-line center"></div>
+            </div>
+
+            <!-- Gallery Filter Tabs -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">සියල්ල <span class="en-tab">All Media</span></button>
+                <button class="filter-btn" data-filter="featured">විශේෂිත <span class="en-tab">Featured</span></button>
+                <button class="filter-btn" data-filter="dancers">නර්තන <span class="en-tab">Dancers</span></button>
+                <button class="filter-btn" data-filter="elephants">අලි ඇතුන් <span class="en-tab">Elephants</span></button>
+                <button class="filter-btn" data-filter="video">වීඩියෝ <span class="en-tab">Videos</span></button>
+            </div>
+
+            <!-- Video Highlight Frame -->
+            <div class="video-container-wrap">
+                <h3 class="video-section-title"><i class="fas fa-video"></i> පෙරහැර වීඩියෝ දර්ශන | Perahera Video Highlights</h3>
+                <div class="video-box-gold">
+                    <video id="perahera-video" controls poster="4 Karaduwa Vadammana Hasthi Rajaya.jpg" class="main-video">
+                        <source src="3 2026 Perahera Vistaraya.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-custom-overlay" id="video-overlay">
+                        <div class="play-btn-circle">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <p>මිහිඳු පෙරහැර සජීවී දර්ශන නැරඹීමට ක්ලික් කරන්න</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Temple Viharaya Images -->
+                <div class="gallery-item featured" data-src="20 Viharasthanaye Budupilima vahanse.jpg" data-caption="මදුරන්කුලිය ශ්‍රී සරණංකරාරාම විහාරස්ථානයේ වැඩසිටින බුද්ධ ප්‍රතිමා වහන්සේ">
+                    <img src="20 Viharasthanaye Budupilima vahanse.jpg" alt="Seated Buddha Statue" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">බුද්ධ ප්‍රතිමා වහන්සේ</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item featured" data-src="23 Madurankuliya viharastaanaya.jpg" data-caption="ඓතිහාසික මදුරන්කුලිය ශ්‍රී සරණංකරාරාම විහාර භූමිය">
+                    <img src="23 Madurankuliya viharastaanaya.jpg" alt="Temple Banner" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">විහාරස්ථ පරිශ්‍රය</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item featured" data-src="19 Vihaarastaanaye Chaithya Rajayaa.jpg" data-caption="විහාරස්ථ සෑ රජුන් වහන්සේ පවිත්‍රතා කටයුතුවල නිරත වන දායක පිරිස">
+                    <img src="19 Vihaarastaanaye Chaithya Rajayaa.jpg" alt="Temple Stupa cleaning" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">විහාරස්ථ වෙහෙර වහන්සේ</p>
+                    </div>
+                </div>
+
+                <!-- New Elephant Image from 2026 Invitation -->
+                <div class="gallery-item featured elephants" data-src="4 Karaduwa Vadammana Hasthi Rajaya.jpg" data-caption="2026 ඓතිහාසික 76 වන මිහිඳු මහා පෙරහැරේ මංගල හස්ති රාජයා">
+                    <img src="4 Karaduwa Vadammana Hasthi Rajaya.jpg" alt="New Decorated Elephant" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">මංගල හස්ති රාජයා (2026)</p>
+                    </div>
+                </div>
+
+                <!-- User Uploaded Main Image 1 (Drummers) -->
+                <div class="gallery-item featured dancers" data-src="1 Horane karuvan.jpg" data-caption="ශ්‍රී සරණංකර විහාරස්ථානයේ අනුබුදු මිහිඳු පෙරහැරේ හේවිසි වාදන ශිල්පීන් - 2024">
+                    <img src="1 Horane karuvan.jpg" alt="Traditional Musicians" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">හේවිසි වාදකයින්</p>
+                    </div>
+                </div>
+
+                <!-- User Uploaded Main Image 3 (Male Dancers) -->
+                <div class="gallery-item dancers" data-src="11 Ves Narthanaya.jpg" data-caption="පෙරහැරේ සාම්ප්‍රදායික වෙස් නර්තන ශිල්පියෙකු">
+                    <img src="11 Ves Narthanaya.jpg" alt="Traditional Male Dancer" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">වෙස් නර්තන ශිල්පියා</p>
+                    </div>
+                </div>
+
+                <!-- User Uploaded Main Image 4 (Female Dancers) -->
+                <div class="gallery-item dancers" data-src="5 Udarata Ves Narthanaya.jpg" data-caption="ලාලිත්‍යවත් වන්දනා නර්තනයක යෙදෙන ගැහැණු ළමුන් කණ්ඩායම">
+                    <img src="5 Udarata Ves Narthanaya.jpg" alt="Traditional Female Dancers" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">කාන්තා වන්දනා නර්තනය</p>
+                    </div>
+                </div>
+
+                <!-- Remaining images in folder -->
+                <div class="gallery-item dancers" data-src="13 Ves Narthanaya.jpg" data-caption="උණ බට පටි ආශ්‍රිතව නම්‍යශීලී නර්තන රටා ඉදිරිපත් කරන කණ්ඩායමක්">
+                    <img src="13 Ves Narthanaya.jpg" alt="Traditional Dance" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">ලී කෙළි නර්තන රටා</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item dancers" data-src="6 Payimpath Narthanaya.jpg" data-caption="උඩරට සාම්ප්‍රදායික නර්තන කණ්ඩායමක්">
+                    <img src="6 Payimpath Narthanaya.jpg" alt="Male Dancers Performance" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">උඩරට නර්තන කණ්ඩායම</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item dancers" data-src="7 Kulu Natuma.jpg" data-caption="පහතරට නර්තන කලාවේ විචිත්‍රවත් අවස්ථාවක්">
+                    <img src="7 Kulu Natuma.jpg" alt="Traditional Mask/Folk Dancer" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">පහතරට නර්තන අංග</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item dancers" data-src="8 Monara Natuma.jpg" data-caption="විචිත්‍රවත් මයුර නර්තන අංගයක් (Peacock Dance)">
+                    <img src="8 Monara Natuma.jpg" alt="Peacock Dance" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">මයුර නර්තනය</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item featured" data-src="9 Giniboolakaruvan.jpg" data-caption="සන්ධ්‍යා භාගයේ පෙරහැර වීදි සංචාරය ආරම්භ වන අවස්ථාව">
+                    <img src="9 Giniboolakaruvan.jpg" alt="Perahera starting scene" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">පෙරහැර ආරම්භය</p>
+                    </div>
+                </div>
+
+                <!-- Additional dynamic images from directory -->
+                <div class="gallery-item" data-src="10 Giniboolakaruvan.jpg" data-caption="ගිනි බෝල කරුවන් (Fireball Performers)">
+                    <img src="10 Giniboolakaruvan.jpg" alt="Fireball Performers" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">ගිනි බෝල කරුවන්</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item dancers" data-src="14 Ves Narthanaya.jpg" data-caption="සාම්ප්‍රදායික වෙස් නර්තන කණ්ඩායමක්">
+                    <img src="14 Ves Narthanaya.jpg" alt="Ves Dancers" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">වෙස් නර්තන කණ්ඩායම</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item featured" data-src="18 Maha Sangarathnaya saha Nilamevarun.jpg" data-caption="මහා සංඝරත්නය සහ නිලමේවරුන් පෙරහැරේ ගමන් කිරීම">
+                    <img src="18 Maha Sangarathnaya saha Nilamevarun.jpg" alt="Maha Sangha & Nilamevarun" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">සංඝරත්නය සහ නිලමේවරුන්</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-src="15 Mal Bicycle karuvan.jpg" data-caption="සැරසූ මල් පාපැදි කණ්ඩායම (Decorated Bicycles)">
+                    <img src="15 Mal Bicycle karuvan.jpg" alt="Decorated Bicycles" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">සැරසූ මල් පාපැදි</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item featured" data-src="16 Karadu Vahanse tanpath kirima.jpg" data-caption="ධාතු කරඬුව තැන්පත් කිරීම (Placing the Casket)">
+                    <img src="16 Karadu Vahanse tanpath kirima.jpg" alt="Placing the Casket" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">ධාතු කරඬුව තැන්පත් කිරීම</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-src="21 Viharasthanaye Boodinvahanse 1.jpg" data-caption="විහාරස්ථ බෝධීන් වහන්සේ">
+                    <img src="21 Viharasthanaye Boodinvahanse 1.jpg" alt="Bodhi Tree" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">විහාරස්ථ බෝධීන් වහන්සේ</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-src="22 Viharasthanaye Boodin vahanse 2.jpg" data-caption="විහාරස්ථ බෝධීන් වහන්සේ (රාත්‍රී දර්ශනය)">
+                    <img src="22 Viharasthanaye Boodin vahanse 2.jpg" alt="Bodhi Tree Night" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">බෝධීන් වහන්සේ (රාත්‍රී)</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item dancers" data-src="17 Kulu Narthanaya.jpg" data-caption="කුළු නර්තන කණ්ඩායම (Traditional Kulu Dancers)">
+                    <img src="17 Kulu Narthanaya.jpg" alt="Traditional Kulu Dancers" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">කුළු නර්තන කණ්ඩායම</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item dancers" data-src="2 Pantheru Natuma.jpg" data-caption="පැන්තරු නර්තන කණ්ඩායම (Pantheru Dancers)">
+                    <img src="2 Pantheru Natuma.jpg" alt="Pantheru Dancers" loading="lazy">
+                    <div class="gallery-item-hover">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <p class="img-desc">පැන්තරු නර්තන කණ්ඩායම</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <span class="lightbox-arrow lightbox-prev" id="lightbox-prev">&#10094;</span>
+        <span class="lightbox-arrow lightbox-next" id="lightbox-next">&#10095;</span>
+        <div class="lightbox-content-box">
+            <img id="lightbox-img" src="" alt="Lightbox Zoomed Image">
+            <div class="lightbox-caption" id="lightbox-caption">Caption text goes here</div>
+        </div>
+    </div>
+
+    <!-- Perahera Timeline / Schedule Section -->
+    <section id="route" class="schedule-section">
+        <div class="container">
+            <!-- Official Invitation Banner -->
+            <div class="invitation-text-box" style="max-width: 900px; margin: 0 auto 40px; padding: 30px; background: linear-gradient(135deg, rgba(9c, 6, 18, 0.08) 0%, rgba(26, 15, 16, 0.03) 100%); border: 2px solid var(--accent-color); border-radius: 8px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                <span class="sub-title" style="color: var(--accent-color); font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 10px;">බැතිබර ආරාධනය | Official Invitation</span>
+                <h3 style="color: var(--primary-color); font-family: var(--font-heading-si); font-size: 1.8rem; margin-bottom: 20px;">76 වන මිහිඳු මහා පෙරහැර මංගල්‍යය</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-dark); font-weight: 500; margin-bottom: 15px;">
+                    පුත්තලම මදුරන්කුලිය ශ්‍රී සරණංකරාරාම විහාරස්ථානය විසින් 76 වන වරටත් සංවිධානය කරනු ලබන, අනුබුදු මිහිඳු මහා පෙරහැර.
+                </p>
+                <p style="font-size: 1rem; line-height: 1.7; color: var(--text-dark); margin-bottom: 15px;">
+                    උඩරට, පහතරට, සබරගමුව සහ නව නිර්මාණ නර්තනාංග රැසක්, අලි ඇතුන්ගෙන් ආඪ්‍ය වෙමින්ද, පෙරහැර නැරඹීමට ආසන්නව 1200ක්, ෆේස්බුක් සජීවීකරණයක්, විදුලි ආලෝකකරණය ඇතුළු විවිධවත් ආලෝකකරණයන්, මෙවැනි අංග රැසකින් සමන්විත, අති උත්කර්ෂවත් පෙරහැරක් මෙවරත් වීදි සංචාරය කෙරෙන වගයි.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--primary-color); font-weight: 600; margin-bottom: 0;">
+                    පෙර නොවූ විරූ ලෙස අප ප්‍රදේශයේ එළිදැක්වෙන, මේ අපූර්ව සංස්කෘතිකමය මංගල්‍යය නැරඹීමට ඔබ සැමට බැති සිතින් ආරාධනා!
+                </p>
+            </div>
+
+            <div class="section-title-area text-center">
+                <span class="sub-title">පෙරහැර ගමන් මඟ සහ කාලසටහන | Schedule & Route</span>
+                <h2 class="section-title">ඓතිහාසික 76 වන මිහිඳු මහා පෙරහැර උත්සව මාලාවේ කාලසටහන</h2>
+                <div class="title-line center"></div>
+            </div>
+
+            <div class="schedule-timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge">1</div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <span class="date-badge"><i class="far fa-calendar-alt"></i> 2026 ජූනි මස 27 වන දින (June 27, 2026)</span>
+                            <h4>රාත්‍රී සර්කස් සංදර්ශන මාලාව</h4>
+                            <span class="en-timeline-title">Grand Night Circus Show Series</span>
+                        </div>
+                        <div class="timeline-body">
+                            <p>2026 ජූනි මස 27 වන දින, රාත්‍රී සර්කස් සංදර්ශන මාලාව...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge">2</div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <span class="date-badge"><i class="far fa-calendar-alt"></i> 2026 ජූනි මස 28 වන දින (June 28, 2026)</span>
+                            <h4>සර්කස්, නාට්‍ය, භාණ්ඩ සල්පිල් සහ ගී ප්‍රසංගය</h4>
+                            <span class="en-timeline-title">Circus, Drama, Auction & Musical Concert</span>
+                        </div>
+                        <div class="timeline-body">
+                            <p>2026 ජූනි මස 28 වන දින, සර්කස් සංදර්ශන සමඟින් වයඹ දේවිමිණි කලා සංගමය මඟින් ඉදිරිපත් කරන, නාට්‍ය සහ භාණ්ඩ සල්පිල් වෙන්දේසිය සමඟින් ආධුනික ගී ප්‍රසංගයද පැවැත්වේ.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 - Highlight (Perahera Day) -->
+                <div class="timeline-item highlight">
+                    <div class="timeline-badge"><i class="fas fa-star"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <span class="date-badge gold"><i class="far fa-calendar-alt"></i> 2026 ජූනි මස 29 වන දින (June 29, 2026)</span>
+                            <h4>ඓතිහාසික 76 වන අනුබුදු මිහිඳු මහා වීදි පෙරහැර</h4>
+                            <span class="en-timeline-title">Grand 76th Mihindu Maha Perahera Street Parade</span>
+                        </div>
+                        <div class="timeline-body">
+                            <p>පුත්තලම මදුරන්කුලිය ශ්‍රී සරණංකරාරාම විහාරස්ථානය විසින් 76 වන වරටත් සංවිධානය කරනු ලබන, අනුබුදු මිහිඳු මහා පෙරහැර.</p>
+                            <p>උඩරට, පහතරට, සබරගමුව සහ නව නිර්මාණ නර්තනාංග රැසක්, අලි ඇතුන්ගෙන් ආඪ්‍ය වෙමින්ද, පෙරහැර නැරඹීමට ආසන්නව 1200ක්, ෆේස්බුක් සජීවීකරණයක්, විදුලි ආලෝකකරණය ඇතුළු විවිධවත් ආලෝකකරණයන්, මෙවැනි අංග රැසකින් සමන්විත, අති උත්කර්ෂවත් පෙරහැරක් මෙවරත් වීදි සංචාරය කෙරෙන වගයි.</p>
+                            <p>පෙර නොවූ විරූ ලෙස අප ප්‍රදේශයේ එළිදැක්වෙන, මේ අපූර්ව සංස්කෘතිකමය මංගල්‍යය නැරඹීමට ඔබ සැමට බැති සිතින් ආරාධනා!</p>
+                            
+                            <div class="detailed-schedule-box" style="margin-top: 15px; padding: 15px; background-color: rgba(9c, 6, 18, 0.05); border-left: 3px solid var(--accent-color); border-radius: 4px; text-align: left;">
+                                <h5 style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 10px; font-family: var(--font-heading-si);"><i class="fas fa-list-ol"></i> පෙරහැර දින වැඩසටහන් පෙළගැස්ම:</h5>
+                                <ul style="list-style: none; padding-left: 0; font-size: 0.85rem; line-height: 1.6;">
+                                    <li><strong>ප.ව. 5.30</strong> - පෙරහැර පෙළ ගැස්ම ඇරඹීම (Lineup begins)</li>
+                                    <li><strong>ප.ව. 5.55</strong> - සධාතුක කරඬුව මංගල හස්තියා මත තැබීම (පිරිත් පැන් ඉසීම)</li>
+                                    <li><strong>ප.ව. 6.00</strong> - මිහිඳු හිමි අනුරුවට මල් පූජාව සහ අසුන් ගැන්වීම (Flower offering & seating)</li>
+                                    <li><strong>ප.ව. 6.10</strong> - පිළිගැනීමේ කථාව - දායක සභාවේ සභාපති චන්න රත්නායක මහතා</li>
+                                    <li><strong>ප.ව. 6.15</strong> - පංචශීලය හා අනුශාසනාව - විහාරාධිපති පූජ්‍ය මහකුඹුක්කඩවල සිරිනන්ද හිමිපාණන් වහන්සේ</li>
+                                    <li><strong>ප.ව. 6.25</strong> - ආරාධිත කථාව - අමාත්‍ය මහාචාර්ය චන්දන අබේරත්න මැතිතුමා</li>
+                                    <li><strong>ප.ව. 7.00</strong> - ඓතිහාසික වීදි පෙරහැර සංචාරය ආරම්භ කිරීම (Commences at 7:00 PM)</li>
+                                </ul>
+                            </div>
+
+                            <div class="route-details" style="margin-top: 15px; text-align: left;">
+                                <strong><i class="fas fa-map-marker-alt"></i> පෙරහැර ගමන් මඟ:</strong> විහාරස්ථාන භූමියෙන් ආරම්භ වී මදුරන්කුලිය නගර මධ්‍යයේ විශේෂ පීඨිකාව හරහා ප්‍රධාන මාර්ගය ඔස්සේ ගමන් කර නැවත විහාරස්ථානයට ගෙවැදීම (අලුයම් කාලයේ දී).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Traffic Congestion & Route Warning Box -->
+            <div class="traffic-warning-box" style="max-width: 900px; margin: 40px auto 0; padding: 20px; background-color: rgba(212, 175, 55, 0.1); border: 2px solid var(--accent-color); border-radius: 6px; display: flex; align-items: center; gap: 20px; text-align: left;">
+                <div class="warning-icon" style="font-size: 2.2rem; color: var(--primary-color);"><i class="fas fa-exclamation-triangle"></i></div>
+                <div class="warning-text">
+                    <h5 style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 5px; font-family: var(--font-heading-si);">විශේෂ මාර්ග තදබදය පිළිබඳ දැනුම්දීම! | Special Traffic Notice</h5>
+                    <p style="font-size: 0.85rem; color: var(--text-dark); margin-bottom: 0;">එදින කොළඹ පුත්තලම ප්‍රධාන මාර්ගයේ, මදුරන්කුලිය මංසන්ධිය අවට මාර්ග තදබදයක් ඇතිවිය හැකි බැවින්, විකල්ප මාර්ග භාවිත කරන මෙන් නැවතත් ඔබට මතක් කර සිටිමු.</p>
+                    <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; margin-bottom: 0; border-top: 1px dashed rgba(0,0,0,0.1); padding-top: 3px;">Due to the procession, heavy traffic congestion is expected near the Madurankuliya junction on the Colombo-Puttalam main road. Please use alternative routes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        </div>
+    </section>
+        </div>
+    </section>
+
+    <!-- Donation & Support Invitation Banner -->
+    <section class="support-banner">
+        <div class="container text-center">
+            <h3>මෙම උදාර ශාසනික මංගල්‍යයට දායක වන්න</h3>
+            <p>සම්බුදු ශාසනයේ උන්නතිය උදෙසා සහ හෙළ සංස්කෘතික උරුමය මතු පරපුරට දායාද කිරීම පිණිස පවත්වනු ලබන මෙම පෙරහැර සඳහා ඔබගේ දායකත්වය සහ ආධාර උපකාර සඳහා <strong>දායක සභාවේ නිලධාරීන් (Dayaka Sabha Officials)</strong> සම්බන්ධ කරගන්නා මෙන් කාරුණිකව ඉල්ලා සිටිමු.</p>
+            <a href="#contact" class="btn btn-primary"><i class="fas fa-hands-helping"></i> දායක සභාවේ නිලධාරීන් සම්බන්ධ කරගන්න <span class="btn-sub">Contact Dayaka Sabha</span></a>
+        </div>
+    </section>
+
+    <!-- Temple Info & Contact Form Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Temple Info -->
+                <div class="contact-info">
+                    <div class="section-title-area">
+                        <span class="sub-title">විමසීම් සහ සබඳතා | Contact Us</span>
+                        <h2 class="section-title">විහාරස්ථාන තොරතුරු</h2>
+                        <div class="title-line"></div>
+                    </div>
+                    
+                    <p>පෙරහැර පිළිබඳ වැඩිදුර විස්තර සහ දායකත්වයන් ලබාදීම සඳහා පහත ලිපිනයෙන් හෝ දුරකථන අංක මඟින් විහාරස්ථ සංවිධායක කමිටුව සම්බන්ධ කරගත හැක.</p>
+
+                    <ul class="contact-details-list">
+                        <li>
+                            <div class="icon-wrap"><i class="fas fa-map-marked-alt"></i></div>
+                            <div class="details-wrap">
+                                <strong>ලිපිනය (Address):</strong>
+                                <p>შ්‍රී සරණංකරාරමය, මදුරන්කුලිය, ශ්‍රී ලංකාව <br> Sri Saranankararamaya, Madurankuliya, Sri Lanka.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-wrap"><i class="fas fa-dharmachakra"></i></div>
+                            <div class="details-wrap">
+                                <strong>විහාරාධිපති (Viharadhipathi Thero):</strong>
+                                <p>පූජ්‍ය මහකුඹුක්කඩවල සිරිනන්ද හිමිපාණන් වහන්සේ <br> Ven. Mahakumbukkadawala Sirinanda Thero</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-wrap"><i class="fas fa-phone-alt"></i></div>
+                            <div class="details-wrap">
+                                <strong>සබඳතා (Contacts):</strong>
+                                <p>සභාපති (Chairman) - චන්න රත්නායක (Channa Ratnayake): +94 77 600 7430 <br> ලේකම් (Secretary) - සුරංජ (Suranja): +94 76 080 0973</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-wrap"><i class="fas fa-envelope"></i></div>
+                            <div class="details-wrap">
+                                <strong>විද්‍යුත් තැපෑල (Email):</strong>
+                                <p>madurankuliyatemple@gmail.com</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Visual stylized map container -->
+                    <div class="visual-map-card">
+                        <h4><i class="fas fa-compass"></i> විහාරස්ථානයට ළඟාවීමට (Location Guide)</h4>
+                        <p>මදුරන්කුලිය හන්දියේ සිට කොළඹ-පුත්තලම ප්‍රධාන මාර්ගය ඔස්සේ මීටර් 500ක් පමණ දුරින් විහාරස්ථානය පිහිටා ඇත. (නගර මධ්‍යයේ පෙරහැර නැරඹීම සඳහා විශේෂ පීඨිකාවක් සූදානම් කර ඇත.)</p>
+                        <div class="location-mock-btn">
+                            <a href="https://maps.app.goo.gl/6Bpkmg2RAmykuRRi7?g_st=ac" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-signs"></i> Google Maps ඔස්සේ මාර්ගය බලන්න</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact/Donation Form -->
+                <div class="contact-form-area">
+                    <div class="form-box">
+                        <h3>දායක සභාවේ නිලධාරීන් සම්බන්ධ කරගැනීම</h3>
+                        <p class="form-subtext">පෙරහැර සඳහා දායකත්වයන් ලබාදීම හෝ විමසීම් සඳහා පහත පෝරමය මඟින් දායක සභාවේ නිලධාරීන් සම්බන්ධ කරගන්න.</p>
+                        
+                        <form id="perahera-contact-form">
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> ඔබගේ නම (Your Name) <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required placeholder="නම ඇතුළත් කරන්න">
+                            </div>
+
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="phone"><i class="fas fa-phone"></i> දුරකථන අංකය (Phone) <span class="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="07X XXXXXXX">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email"><i class="fas fa-envelope"></i> විද්‍යුත් තැපෑල (Email)</label>
+                                    <input type="email" id="email" name="email" placeholder="example@mail.com">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message-type"><i class="fas fa-hands"></i> විමසීමේ ස්වභාවය (Type of Inquiry)</label>
+                                <select id="message-type" name="message-type">
+                                    <option value="donation">පෙරහැර දායකත්වය (Donations & Sponsors)</option>
+                                    <option value="cultural">සංස්කෘතිකාංග ඉදිරිපත් කිරීම් (Cultural Performances)</option>
+                                    <option value="volunteer">ස්වේච්ඡා සේවා (Volunteering)</option>
+                                    <option value="general">වෙනත් සාමාන්‍ය තොරතුරු (General Inquiry)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message"><i class="fas fa-comment-alt"></i> පණිවිඩය (Your Message) <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="5" required placeholder="ඔබගේ පණිවිඩය මෙහි ලියන්න..."></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> පණිවිඩය යොමු කරන්න <span class="btn-sub-text">Submit Message</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 50 50" class="lotus-logo-gold">
+                            <path d="M25 5 C22 15, 15 20, 25 45 C35 20, 28 15, 25 5 Z" fill="#d4af37"/>
+                            <path d="M25 15 C15 22, 10 32, 25 45 C40 32, 35 22, 25 15 Z" fill="#ffffff" opacity="0.5"/>
+                        </svg>
+                        <h4>මදුරන්කුලිය ශ්‍රී සරණංකරාරාමය</h4>
+                    </div>
+                    <p>විහාරාධිපති හිමියන් ඇතුළු සරණංකර දායක සභාව, ප්‍රතිසංස්කරණ කමිටුව සහ මිහිඳු පෙරහැර සංවිධායක කමිටුව මඟින් සංවිධානය කරනු ලබයි.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>සබැඳි (Quick Links)</h4>
+                    <ul>
+                        <li><a href="#hero"><i class="fas fa-chevron-right"></i> මුල් පිටුව (Home)</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> පෙරහැර ඉතිහාසය (History)</a></li>
+                        <li><a href="#pageant"><i class="fas fa-chevron-right"></i> සංස්කෘතිකාංග (Pageant)</a></li>
+                        <li><a href="#gallery"><i class="fas fa-chevron-right"></i> ඡායාරූප (Gallery)</a></li>
+                        <li><a href="#route"><i class="fas fa-chevron-right"></i> ගමන් මඟ (Route)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-blessing-card">
+                    <h4>තෙරුවන් සරණයි</h4>
+                    <p class="blessing-quote">"ආරෝග්‍යපරමා ලාභා - සන්තුට්ඨිපරමං ධනං <br> විශ්වාසාපරමා ඥාති - නිබ්බාණපරමං සුඛං"</p>
+                    <p class="blessing-trans">නිරෝගිකම උතුම්ම ලාභයයි. සතුට උතුම්ම ධනයයි. විශ්වාසවන්තයා හොඳම නෑයායි. නිවන් දැකීම පරම සැපතයි.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; 2026 Madurankuliya Sri Saranankararama Viharaya. All Rights Reserved. Designed & Developed under the Traditional Perahera Theme.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
