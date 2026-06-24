@@ -428,8 +428,46 @@
     .nav-menu.open { max-height: 420px; }
     .nav-menu ul { flex-direction: column; padding: 10px 0; gap: 0; }
     .nav-menu ul li { width: 100%; }
-    .nav-menu ul li a { padding: 13px 24px; flex-direction: row; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.88rem; border-radius: 0; }
-    .en-nav { font-size: 0.72rem; }
+    .nav-menu ul li a { padding: 16px 24px; flex-direction: row; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 1.1rem; border-radius: 0; }
+    .en-nav { font-size: 0.82rem; }
+
+    /* Increase legibility of body text on mobile */
+    body { font-size: 1.05rem; }
+    p { font-size: 1.05rem !important; line-height: 1.8; }
+    .about-text-content p { font-size: 1.05rem !important; }
+    .highlighted-para { font-size: 1.15rem !important; }
+    
+    /* Section Title Legibility */
+    .section-title { font-size: 1.8rem !important; }
+    .sub-title { font-size: 0.85rem !important; letter-spacing: 2px; }
+
+    /* Timeline Legibility */
+    .timeline-heading h4 { font-size: 1.2rem !important; }
+    .en-timeline-title { font-size: 0.9rem !important; }
+    .timeline-body p { font-size: 1rem !important; }
+    .detailed-schedule-box li { font-size: 0.95rem !important; }
+    .detailed-schedule-box h5 { font-size: 1.1rem !important; }
+    .route-details { font-size: 0.95rem !important; }
+    .traffic-warning-box p { font-size: 0.95rem !important; }
+
+    /* Form Legibility */
+    .form-box h3 { font-size: 1.3rem !important; }
+    .form-subtext { font-size: 0.95rem !important; }
+    .form-group label { font-size: 0.95rem !important; }
+    .form-group input, .form-group select, .form-group textarea { font-size: 1rem !important; padding: 12px 16px; }
+    .submit-btn { font-size: 1.1rem !important; padding: 16px; }
+
+    /* Feature Item Legibility */
+    .feature-desc h4 { font-size: 1.1rem !important; }
+    .feature-desc p { font-size: 0.95rem !important; }
+
+    /* Contact Section */
+    .contact-info p { font-size: 1.05rem !important; }
+    .details-wrap strong { font-size: 0.95rem !important; }
+    .details-wrap p { font-size: 0.95rem !important; }
+    .visual-map-card h4 { font-size: 1.1rem !important; }
+    .visual-map-card p { font-size: 0.95rem !important; }
+    .location-mock-btn a { font-size: 0.95rem !important; }
 
     /* Hero */
     .hero-content { padding: 95px 20px 70px; }
@@ -451,7 +489,7 @@
     .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
     .gallery-filters { overflow-x: auto; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 10px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
     .gallery-filters::-webkit-scrollbar { display: none; }
-    .filter-btn { white-space: nowrap; flex-shrink: 0; }
+    .filter-btn { white-space: nowrap; flex-shrink: 0; font-size: 0.95rem !important; padding: 10px 20px !important; }
 
     /* Timeline */
     .schedule-timeline { padding-left: 30px; }
@@ -489,11 +527,11 @@
   @media (max-width: 480px) {
     .header-container { height: 60px; }
     .nav-menu { top: 60px; }
-    .sin-title { font-size: 0.8rem; }
-    .logo-icon { width: 32px; height: 32px; }
+    .sin-title { font-size: 1rem !important; }
+    .logo-icon { width: 34px; height: 34px; }
 
     .hero-content { padding: 80px 16px 55px; }
-    .hero-year-badge { font-size: 0.76rem; }
+    .hero-year-badge { font-size: 0.8rem; }
 
     /* Single column pageant on tiny screens */
     .pageant-grid { grid-template-columns: 1fr; }
@@ -510,7 +548,7 @@
     .schedule-timeline::before { left: 6px; }
     .timeline-badge { left: -28px; width: 18px; height: 18px; font-size: 0.6rem; }
     .timeline-item.highlight .timeline-badge { left: -30px; width: 22px; height: 22px; }
-    .detailed-schedule-box li { font-size: 0.78rem; }
+    .detailed-schedule-box li { font-size: 0.85rem !important; }
 
     .blessing-banner { padding: 35px 16px; }
     .support-banner { padding: 45px 16px; }
@@ -1232,12 +1270,18 @@
 
   <script>
     // PRELOADER
-    window.addEventListener('load', () => {
+    const hidePreloader = () => {
       const preloader = document.getElementById('preloader');
-      setTimeout(() => {
+      if (preloader && !preloader.classList.contains('hide')) {
         preloader.classList.add('hide');
-      }, 1200); // 1.2s delay for a premium feel
+      }
+    };
+    // Trigger when DOM is ready
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(hidePreloader, 1500); // 1.5 seconds max load for premium feel
     });
+    // Fallback safety timeout (3 seconds max)
+    setTimeout(hidePreloader, 3000);
 
     // MOBILE MENU
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
