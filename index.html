@@ -1,918 +1,1169 @@
 <!DOCTYPE html>
 <html lang="si">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madurankuliya Sri Saranankararama Mihindu Perahera 2026 | මදුරන්කුලිය ශ්‍රී සරණංකරාරාම මිහිඳු මහා පෙරහැර</title>
-    <meta name="description" content="Official website for Madurankuliya Sri Saranankararama Mihindu Perahera 2026. Explore the historical, cultural pageant, view image galleries, Perahera schedule, and route map.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Cinzel:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Madurankuliya Sri Saranankararama Mihindu Perahera 2026</title>
+  <meta name="description" content="Official website for Madurankuliya Sri Saranankararama Mihindu Perahera 2026. 76th Historic Cultural Pageant.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Cinzel:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+  /* ===================================================
+     CSS CUSTOM PROPERTIES
+  =================================================== */
+  :root {
+    --primary: #8c0612;
+    --primary-dark: #5a0309;
+    --bg-dark: #1a0f10;
+    --bg-darker: #0d0608;
+    --accent: #d4af37;
+    --accent-light: #f0d870;
+    --text-light: #f5f0e8;
+    --text-muted: #9e8a7a;
+    --text-dark: #2c1a1e;
+    --font-si: 'Abhaya Libre', serif;
+    --font-en: 'Cinzel', serif;
+    --font-body: 'Poppins', sans-serif;
+    --transition: all 0.3s ease;
+    --shadow-gold: 0 8px 25px rgba(212,175,55,0.2);
+    --border-gold: 1px solid rgba(212,175,55,0.25);
+  }
+
+  /* ===================================================
+     RESET
+  =================================================== */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--bg-dark); color: var(--text-light); overflow-x: hidden; line-height: 1.6; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { text-decoration: none; color: inherit; transition: var(--transition); }
+  ul { list-style: none; }
+  input, select, textarea, button { font-family: inherit; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  .text-center { text-align: center; }
+  .section-pad { padding: 80px 0; }
+
+  /* ===================================================
+     PRELOADER
+  =================================================== */
+  #preloader {
+    position: fixed; inset: 0; z-index: 9999;
+    background: var(--bg-darker);
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.8s ease;
+  }
+  #preloader.hide { opacity: 0; pointer-events: none; }
+  .preloader-content { text-align: center; padding: 20px; }
+  .lamp-container { width: 80px; height: 80px; margin: 0 auto 20px; animation: flicker 1.8s ease-in-out infinite alternate; }
+  .oil-lamp { width: 100%; height: 100%; }
+  @keyframes flicker { 0%{opacity:.8;transform:scale(.97)} 100%{opacity:1;transform:scale(1.05)} }
+  .preloader-title { font-family: var(--font-si); color: var(--accent); font-size: 1.5rem; margin-bottom: 6px; }
+  .preloader-subtitle { color: var(--text-muted); font-size: 0.82rem; margin-bottom: 22px; }
+  .progress-bar { width: 200px; height: 3px; background: rgba(255,255,255,0.1); margin: 0 auto; border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: 3px; animation: prog 2.8s ease forwards; }
+  @keyframes prog { 0%{width:0} 100%{width:100%} }
+
+  /* ===================================================
+     AUDIO CONTROL
+  =================================================== */
+  .audio-control {
+    position: fixed; bottom: 20px; right: 20px; z-index: 900;
+    background: rgba(13,6,8,0.92); border: var(--border-gold); border-radius: 50px;
+    padding: 10px 16px; display: flex; align-items: center; gap: 8px;
+    cursor: pointer; font-size: 0.8rem; color: var(--accent); backdrop-filter: blur(10px);
+    transition: var(--transition);
+  }
+  .audio-control:hover { background: rgba(212,175,55,0.12); }
+
+  /* ===================================================
+     HEADER
+  =================================================== */
+  .main-header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(13,6,8,0.95); border-bottom: var(--border-gold);
+    backdrop-filter: blur(12px); transition: var(--transition);
+  }
+  .header-container {
+    max-width: 1200px; margin: 0 auto; padding: 0 20px;
+    display: flex; align-items: center; justify-content: space-between; height: 68px;
+  }
+  .logo-area { display: flex; align-items: center; gap: 12px; }
+  .logo-icon { width: 38px; height: 38px; flex-shrink: 0; }
+  .lotus-logo, .lotus-logo-gold { width: 100%; height: 100%; }
+  .logo-text { display: flex; flex-direction: column; }
+  .sin-title { font-family: var(--font-si); color: var(--accent); font-size: 0.88rem; font-weight: 700; line-height: 1.2; }
+  .eng-title { font-family: var(--font-en); color: var(--text-muted); font-size: 0.6rem; letter-spacing: 1.5px; }
+
+  /* Hamburger */
+  .nav-toggle {
+    display: none; background: none; border: var(--border-gold); border-radius: 5px;
+    padding: 8px; cursor: pointer; width: 42px; height: 42px;
+    align-items: center; justify-content: center; flex-direction: column; gap: 5px;
+  }
+  .bar { display: block; width: 22px; height: 2px; background: var(--accent); border-radius: 2px; transition: var(--transition); }
+  .nav-toggle.open .bar:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .nav-toggle.open .bar:nth-child(2) { opacity: 0; }
+  .nav-toggle.open .bar:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  /* Nav */
+  .nav-menu ul { display: flex; align-items: center; gap: 2px; }
+  .nav-menu ul li a {
+    color: var(--text-light); font-size: 0.78rem; padding: 8px 10px; border-radius: 5px;
+    display: flex; flex-direction: column; align-items: center; gap: 1px; transition: var(--transition);
+  }
+  .en-nav { font-size: 0.62rem; color: var(--text-muted); }
+  .nav-menu ul li a:hover, .nav-menu ul li a.active { color: var(--accent); background: rgba(212,175,55,0.1); }
+
+  /* ===================================================
+     BUTTONS
+  =================================================== */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 13px 26px; border-radius: 5px; font-family: var(--font-si); font-size: 0.95rem;
+    font-weight: 600; cursor: pointer; border: none; transition: var(--transition);
+    flex-direction: column; text-align: center; line-height: 1.3;
+  }
+  .btn-sub { font-family: var(--font-body); font-size: 0.68rem; font-weight: 400; opacity: 0.8; }
+  .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; border: var(--border-gold); }
+  .btn-primary:hover { background: linear-gradient(135deg,#a00715,#6e0410); transform: translateY(-2px); box-shadow: var(--shadow-gold); }
+  .btn-secondary { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
+  .btn-secondary:hover { background: rgba(212,175,55,0.1); transform: translateY(-2px); }
+
+  /* ===================================================
+     SECTION TITLE AREA
+  =================================================== */
+  .section-title-area { margin-bottom: 40px; }
+  .sub-title { display: block; font-family: var(--font-en); font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .section-title { font-family: var(--font-si); font-size: clamp(1.3rem, 3vw, 1.9rem); color: var(--text-light); margin-bottom: 14px; line-height: 1.4; }
+  .title-line { width: 55px; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: 2px; }
+  .title-line.center { margin: 0 auto; }
+
+  /* ===================================================
+     HERO SECTION
+  =================================================== */
+  .hero-section { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
+  .hero-slider { position: absolute; inset: 0; }
+  .slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.2s ease; }
+  .slide.active { opacity: 1; }
+  .hero-content { position: relative; z-index: 2; max-width: 920px; margin: 0 auto; padding: 120px 24px 100px; text-align: center; }
+  .decoration-top { margin-bottom: 15px; }
+  .border-motif { max-width: 200px; margin: 0 auto; opacity: 0.6; }
+  .hero-year-badge {
+    display: inline-block; background: rgba(212,175,55,0.12); border: 1px solid var(--accent);
+    color: var(--accent); font-family: var(--font-si); font-size: 0.85rem;
+    padding: 6px 22px; border-radius: 20px; margin-bottom: 22px;
+  }
+  .hero-main-title { margin-bottom: 22px; }
+  .hero-main-title .line-1 { display: block; font-family: var(--font-si); font-size: clamp(1.4rem, 4vw, 2.5rem); color: var(--accent); margin-bottom: 10px; line-height: 1.3; }
+  .hero-main-title .line-2 { display: block; font-family: var(--font-si); font-size: clamp(1.1rem, 3.5vw, 2rem); color: white; margin-bottom: 10px; line-height: 1.3; }
+  .hero-main-title .line-en { display: block; font-family: var(--font-en); font-size: clamp(0.68rem, 1.5vw, 0.95rem); color: var(--text-muted); letter-spacing: 2px; }
+  .hero-desc { font-family: var(--font-si); font-size: clamp(0.88rem, 2vw, 1rem); color: rgba(245,240,232,0.85); line-height: 1.85; margin: 0 auto 30px; max-width: 680px; }
+  .hero-actions { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+  .scroll-indicator { color: var(--text-muted); font-size: 0.78rem; }
+  .animate-bounce { animation: bounce 2s infinite; display: block; margin-top: 8px; }
+  @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  .hero-bottom-curve { position: absolute; bottom: -1px; left: 0; right: 0; }
+  .hero-bottom-curve svg { width: 100%; display: block; }
+
+  /* ===================================================
+     BLESSING BANNER
+  =================================================== */
+  .blessing-banner {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, rgba(13,6,8,0.98) 100%);
+    padding: 50px 24px;
+    border-top: var(--border-gold); border-bottom: var(--border-gold);
+  }
+  .blessing-text { font-family: var(--font-si); font-size: clamp(1rem, 3vw, 1.7rem); color: var(--accent); margin-bottom: 10px; }
+  .blessing-translation { color: var(--text-muted); font-family: var(--font-si); font-size: 0.9rem; }
+  .floral-separator { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 16px; color: var(--accent); font-size: 1.4rem; }
+
+  /* ===================================================
+     ABOUT SECTION
+  =================================================== */
+  .about-section { padding: 80px 0; background: var(--bg-dark); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: center; }
+  .highlighted-para {
+    font-family: var(--font-si); font-size: 1.02rem; color: var(--text-light); line-height: 1.85;
+    padding: 18px 20px; background: rgba(212,175,55,0.05); border-left: 3px solid var(--accent);
+    border-radius: 0 5px 5px 0; margin-bottom: 20px;
+  }
+  .about-text-content p { font-family: var(--font-si); color: rgba(245,240,232,0.8); line-height: 1.85; margin-bottom: 18px; font-size: 0.93rem; }
+  .temple-features { display: flex; flex-direction: column; gap: 14px; margin-top: 22px; }
+  .feature-item { display: flex; gap: 14px; align-items: flex-start; padding: 15px; background: rgba(255,255,255,0.03); border: var(--border-gold); border-radius: 6px; }
+  .feature-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent); font-size: 1.05rem; }
+  .feature-desc h4 { font-family: var(--font-si); color: var(--accent); font-size: 0.92rem; margin-bottom: 4px; }
+  .feature-desc p { font-family: var(--font-si); font-size: 0.82rem !important; color: var(--text-muted) !important; margin-bottom: 0 !important; line-height: 1.6; }
+  .about-image-card { position: relative; }
+  .gold-frame { position: relative; padding: 12px; background: linear-gradient(135deg, rgba(212,175,55,0.2), rgba(212,175,55,0.05)); border: 2px solid var(--accent); border-radius: 6px; }
+  .gold-frame img { width: 100%; border-radius: 4px; object-fit: cover; }
+  .frame-corner { position: absolute; width: 20px; height: 20px; border-color: var(--accent); border-style: solid; }
+  .frame-corner.top-left { top: -2px; left: -2px; border-width: 3px 0 0 3px; }
+  .frame-corner.top-right { top: -2px; right: -2px; border-width: 3px 3px 0 0; }
+  .frame-corner.bottom-left { bottom: -2px; left: -2px; border-width: 0 0 3px 3px; }
+  .frame-corner.bottom-right { bottom: -2px; right: -2px; border-width: 0 3px 3px 0; }
+
+  /* ===================================================
+     PAGEANT SECTION
+  =================================================== */
+  .pageant-section { padding: 80px 0; background: linear-gradient(180deg, rgba(13,6,8,0.99) 0%, rgba(9,4,5,1) 100%); }
+  .pageant-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .pageant-card { background: rgba(255,255,255,0.03); border: var(--border-gold); border-radius: 8px; overflow: hidden; transition: var(--transition); }
+  .pageant-card:hover { transform: translateY(-5px); border-color: rgba(212,175,55,0.45); box-shadow: var(--shadow-gold); }
+  .pageant-card.highlight { border-color: rgba(212,175,55,0.5); }
+  .card-image { height: 200px; background-size: cover; background-position: center; position: relative; }
+  .card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,6,8,0.92) 0%, rgba(0,0,0,0.15) 100%); }
+  .card-icon { position: absolute; top: 14px; right: 14px; width: 34px; height: 34px; background: rgba(212,175,55,0.12); border: 1px solid var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 0.82rem; }
+  .featured-badge { position: absolute; top: 14px; left: 14px; background: var(--primary); color: white; font-size: 0.68rem; padding: 3px 10px; border-radius: 3px; font-family: var(--font-si); }
+  .card-content { text-align: center; padding: 22px 18px 18px; }
+  .card-content h4 { font-family: var(--font-si); color: var(--accent); font-size: 1.05rem; margin-bottom: 4px; }
+  .card-content p { font-size: 0.78rem; color: var(--text-muted); }
+
+  /* ===================================================
+     REFLECTIONS SECTION
+  =================================================== */
+  .reflections-section { padding: 80px 0; background: var(--bg-dark); }
+  .reflections-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 40px; }
+  .reflection-card { background: rgba(255,255,255,0.03); border: var(--border-gold); border-radius: 8px; padding: 20px; transition: var(--transition); }
+  .reflection-card:hover { border-color: rgba(212,175,55,0.4); background: rgba(255,255,255,0.05); }
+  .reflection-card-header { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+  .reflection-num { width: 30px; height: 30px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.78rem; font-weight: 700; flex-shrink: 0; }
+  .reflection-card-header h4 { font-family: var(--font-si); color: var(--accent); font-size: 0.88rem; line-height: 1.4; }
+  .en-ref-title { display: block; font-family: var(--font-body); font-size: 0.7rem; color: var(--text-muted); font-weight: 400; margin-top: 3px; }
+  .reflection-body-text { font-family: var(--font-si); font-size: 0.83rem; color: rgba(245,240,232,0.75); line-height: 1.7; margin-bottom: 8px; }
+  .reflection-body-text.en { font-family: var(--font-body); font-size: 0.76rem; color: var(--text-muted); font-style: italic; }
+
+  /* Requests Banner */
+  .requests-banner { background: linear-gradient(135deg, rgba(140,6,18,0.1) 0%, rgba(26,15,16,0.3) 100%); border: 2px solid rgba(212,175,55,0.25); border-radius: 8px; padding: 28px; margin-top: 40px; }
+  .requests-banner h3 { font-family: var(--font-si); color: var(--accent); font-size: 1.25rem; margin-bottom: 4px; }
+  .requests-banner .en-title { display: block; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 20px; }
+  .requests-list { display: flex; flex-direction: column; gap: 14px; }
+  .request-item { display: flex; gap: 14px; align-items: flex-start; padding: 14px; background: rgba(255,255,255,0.03); border-radius: 6px; }
+  .request-badge { width: 28px; height: 28px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 700; flex-shrink: 0; }
+  .request-text h5 { font-family: var(--font-si); color: var(--text-light); font-size: 0.88rem; margin-bottom: 5px; }
+  .request-text p { font-family: var(--font-si); font-size: 0.8rem; color: rgba(245,240,232,0.75); line-height: 1.6; margin-bottom: 5px; }
+  .request-text p.en { font-family: var(--font-body); font-size: 0.76rem; color: var(--text-muted); font-style: italic; }
+
+  /* ===================================================
+     GALLERY SECTION
+  =================================================== */
+  .gallery-section { padding: 80px 0; background: linear-gradient(180deg, rgba(9,4,5,1) 0%, rgba(13,6,8,1) 100%); }
+  .gallery-filters { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
+  .filter-btn { background: transparent; border: var(--border-gold); color: var(--text-muted); padding: 8px 16px; border-radius: 5px; cursor: pointer; font-family: var(--font-si); font-size: 0.82rem; transition: var(--transition); }
+  .filter-btn .en-tab { font-family: var(--font-body); font-size: 0.68rem; display: block; }
+  .filter-btn.active, .filter-btn:hover { background: rgba(212,175,55,0.12); border-color: var(--accent); color: var(--accent); }
+
+  /* Video */
+  .video-container-wrap { margin-bottom: 35px; }
+  .video-section-title { font-family: var(--font-si); color: var(--accent); font-size: 1.05rem; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .video-box-gold { position: relative; border: 2px solid rgba(212,175,55,0.3); border-radius: 8px; overflow: hidden; background: #000; }
+  .main-video { width: 100%; max-height: 480px; display: block; }
+  .video-custom-overlay { position: absolute; inset: 0; background: rgba(13,6,8,0.72); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; cursor: pointer; transition: var(--transition); }
+  .video-custom-overlay:hover { background: rgba(13,6,8,0.5); }
+  .play-btn-circle { width: 68px; height: 68px; background: rgba(212,175,55,0.18); border: 2px solid var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.4rem; transition: var(--transition); }
+  .video-custom-overlay:hover .play-btn-circle { transform: scale(1.1); background: rgba(212,175,55,0.28); }
+  .video-custom-overlay p { font-family: var(--font-si); color: var(--text-light); font-size: 0.88rem; text-align: center; padding: 0 20px; }
+
+  /* Gallery Grid */
+  .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .gallery-item { position: relative; border-radius: 6px; overflow: hidden; cursor: pointer; aspect-ratio: 4/3; background: rgba(0,0,0,0.3); }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+  .gallery-item:hover img { transform: scale(1.08); }
+  .gallery-item-hover { position: absolute; inset: 0; background: rgba(13,6,8,0.82); display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transition: var(--transition); padding: 10px; }
+  .gallery-item:hover .gallery-item-hover { opacity: 1; }
+  .zoom-icon { color: var(--accent); font-size: 1.4rem; margin-bottom: 7px; }
+  .img-desc { font-family: var(--font-si); color: white; font-size: 0.76rem; text-align: center; }
+
+  /* ===================================================
+     LIGHTBOX
+  =================================================== */
+  .lightbox { display: none; position: fixed; inset: 0; z-index: 9000; background: rgba(0,0,0,0.96); align-items: center; justify-content: center; padding: 20px; }
+  .lightbox.active { display: flex; }
+  .lightbox-close { position: absolute; top: 15px; right: 22px; color: white; font-size: 2.4rem; cursor: pointer; z-index: 1; line-height: 1; transition: var(--transition); }
+  .lightbox-close:hover { color: var(--accent); }
+  .lightbox-arrow { position: absolute; top: 50%; transform: translateY(-50%); color: white; font-size: 1.8rem; cursor: pointer; padding: 14px 12px; background: rgba(255,255,255,0.08); border-radius: 4px; transition: var(--transition); z-index: 1; user-select: none; }
+  .lightbox-arrow:hover { background: rgba(212,175,55,0.18); color: var(--accent); }
+  .lightbox-prev { left: 10px; }
+  .lightbox-next { right: 10px; }
+  .lightbox-content-box { max-width: 90vw; text-align: center; }
+  #lightbox-img { max-height: 80vh; max-width: 100%; border: 2px solid rgba(212,175,55,0.3); border-radius: 5px; }
+  .lightbox-caption { color: var(--text-muted); font-family: var(--font-si); font-size: 0.82rem; margin-top: 12px; padding: 8px 14px; background: rgba(255,255,255,0.05); border-radius: 4px; }
+
+  /* ===================================================
+     SCHEDULE SECTION
+  =================================================== */
+  .schedule-section { padding: 80px 0; background: var(--bg-dark); }
+  .invitation-text-box { max-width: 900px; margin: 0 auto 45px; padding: 30px; background: linear-gradient(135deg, rgba(140,6,18,0.08) 0%, rgba(26,15,16,0.03) 100%); border: 2px solid var(--accent); border-radius: 8px; text-align: center; box-shadow: var(--shadow-gold); }
+  .invitation-text-box .sub-title { color: var(--accent); font-size: 0.82rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 10px; }
+  .invitation-text-box h3 { font-family: var(--font-si); color: var(--primary); font-size: clamp(1.2rem, 3vw, 1.7rem); margin-bottom: 18px; }
+  .invitation-text-box p { font-family: var(--font-si); font-size: 0.95rem; line-height: 1.8; color: var(--text-light); margin-bottom: 12px; }
+  .invitation-text-box p:last-child { color: var(--accent); font-weight: 600; margin-bottom: 0; }
+
+  /* Timeline */
+  .schedule-timeline { position: relative; padding-left: 42px; }
+  .schedule-timeline::before { content: ''; position: absolute; left: 13px; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--primary), var(--accent)); }
+  .timeline-item { position: relative; margin-bottom: 28px; }
+  .timeline-badge { position: absolute; left: -49px; top: 5px; width: 26px; height: 26px; background: var(--primary); border: 2px solid var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.72rem; font-weight: 700; }
+  .timeline-item.highlight .timeline-badge { background: var(--accent); color: var(--primary-dark); width: 30px; height: 30px; left: -51px; font-size: 0.78rem; }
+  .timeline-panel { background: rgba(255,255,255,0.03); border: var(--border-gold); border-radius: 8px; padding: 20px; }
+  .timeline-item.highlight .timeline-panel { border-color: rgba(212,175,55,0.45); background: rgba(212,175,55,0.04); }
+  .date-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(140,6,18,0.18); border: 1px solid rgba(140,6,18,0.4); color: var(--text-muted); font-size: 0.76rem; padding: 4px 12px; border-radius: 3px; margin-bottom: 10px; }
+  .date-badge.gold { background: rgba(212,175,55,0.12); border-color: var(--accent); color: var(--accent); }
+  .timeline-heading h4 { font-family: var(--font-si); color: var(--accent); font-size: 1.05rem; margin-bottom: 4px; }
+  .en-timeline-title { font-family: var(--font-body); font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 12px; }
+  .timeline-body p { font-family: var(--font-si); color: rgba(245,240,232,0.8); font-size: 0.86rem; line-height: 1.75; margin-bottom: 10px; }
+  .detailed-schedule-box { margin-top: 15px; padding: 16px; background: rgba(255,255,255,0.03); border-left: 3px solid var(--accent); border-radius: 4px; text-align: left; }
+  .detailed-schedule-box h5 { color: var(--primary); font-family: var(--font-si); font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .detailed-schedule-box ul { list-style: none; padding: 0; }
+  .detailed-schedule-box li { font-family: var(--font-si); font-size: 0.83rem; line-height: 1.7; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); color: rgba(245,240,232,0.8); }
+  .detailed-schedule-box li:last-child { border-bottom: none; }
+  .detailed-schedule-box li strong { color: var(--accent); }
+  .route-details { margin-top: 14px; font-family: var(--font-si); font-size: 0.84rem; color: rgba(245,240,232,0.8); line-height: 1.7; }
+  .traffic-warning-box { max-width: 900px; margin: 38px auto 0; padding: 20px; background: rgba(212,175,55,0.08); border: 2px solid var(--accent); border-radius: 6px; display: flex; align-items: flex-start; gap: 18px; }
+  .warning-icon { font-size: 2rem; color: var(--primary); flex-shrink: 0; padding-top: 3px; }
+  .warning-text h5 { font-family: var(--font-si); color: var(--primary); font-size: 1rem; margin-bottom: 6px; }
+  .warning-text p { font-size: 0.83rem; color: var(--text-dark); line-height: 1.65; color: rgba(245,240,232,0.82); }
+  .warning-text p + p { margin-top: 5px; font-size: 0.76rem; color: var(--text-muted); border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 5px; }
+
+  /* ===================================================
+     SUPPORT BANNER
+  =================================================== */
+  .support-banner { padding: 60px 24px; background: linear-gradient(135deg, var(--primary-dark) 0%, rgba(13,6,8,0.98) 100%); border-top: var(--border-gold); border-bottom: var(--border-gold); text-align: center; }
+  .support-banner h3 { font-family: var(--font-si); color: var(--accent); font-size: clamp(1.1rem, 3vw, 1.7rem); margin-bottom: 14px; }
+  .support-banner p { font-family: var(--font-si); color: rgba(245,240,232,0.8); font-size: 0.93rem; line-height: 1.85; max-width: 700px; margin: 0 auto 24px; }
+
+  /* ===================================================
+     CONTACT SECTION
+  =================================================== */
+  .contact-section { padding: 80px 0; background: linear-gradient(180deg, rgba(9,4,5,1) 0%, rgba(13,6,8,1) 100%); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .contact-info > p { font-family: var(--font-si); color: rgba(245,240,232,0.8); font-size: 0.9rem; line-height: 1.8; margin-bottom: 5px; }
+  .contact-details-list { display: flex; flex-direction: column; gap: 14px; margin: 18px 0; }
+  .contact-details-list li { display: flex; gap: 14px; align-items: flex-start; }
+  .icon-wrap { width: 40px; height: 40px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0; font-size: 0.9rem; }
+  .details-wrap strong { display: block; color: var(--accent); font-size: 0.82rem; margin-bottom: 3px; }
+  .details-wrap p { font-family: var(--font-si); color: rgba(245,240,232,0.8); font-size: 0.82rem; line-height: 1.6; }
+  .visual-map-card { background: rgba(212,175,55,0.05); border: var(--border-gold); border-radius: 8px; padding: 20px; margin-top: 18px; }
+  .visual-map-card h4 { font-family: var(--font-si); color: var(--accent); font-size: 0.92rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .visual-map-card p { font-family: var(--font-si); color: rgba(245,240,232,0.75); font-size: 0.82rem; line-height: 1.65; margin-bottom: 14px; }
+  .location-mock-btn a { display: inline-flex; align-items: center; gap: 8px; background: rgba(140,6,18,0.18); border: 1px solid var(--primary); color: var(--text-light); padding: 10px 20px; border-radius: 4px; font-size: 0.82rem; transition: var(--transition); }
+  .location-mock-btn a:hover { background: rgba(140,6,18,0.35); color: var(--accent); }
+
+  /* Form */
+  .form-box { background: rgba(255,255,255,0.03); border: var(--border-gold); border-radius: 8px; padding: 30px; }
+  .form-box h3 { font-family: var(--font-si); color: var(--accent); font-size: 1.05rem; margin-bottom: 8px; }
+  .form-subtext { font-family: var(--font-si); color: var(--text-muted); font-size: 0.82rem; margin-bottom: 20px; line-height: 1.6; }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: flex; align-items: center; gap: 6px; font-family: var(--font-si); color: var(--text-light); font-size: 0.82rem; margin-bottom: 6px; }
+  .required { color: var(--primary); }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.2); border-radius: 4px; padding: 10px 14px; color: var(--text-light); font-size: 0.86rem; outline: none; transition: var(--transition); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); background: rgba(255,255,255,0.07); }
+  .form-group select option { background: var(--bg-darker); color: var(--text-light); }
+  .form-group textarea { resize: vertical; }
+  .form-group-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .submit-btn { width: 100%; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; border: var(--border-gold); border-radius: 4px; padding: 14px; font-family: var(--font-si); font-size: 0.98rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; flex-direction: column; transition: var(--transition); margin-top: 6px; }
+  .submit-btn:hover { background: linear-gradient(135deg,#a00715,#6e0410); transform: translateY(-1px); }
+  .btn-sub-text { font-family: var(--font-body); font-size: 0.68rem; opacity: 0.8; }
+
+  /* ===================================================
+     FOOTER
+  =================================================== */
+  .main-footer { background: rgba(8,3,4,1); border-top: var(--border-gold); }
+  .footer-top { padding: 50px 0 30px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 2fr; gap: 38px; }
+  .footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .footer-logo h4 { font-family: var(--font-si); color: var(--accent); font-size: 0.92rem; }
+  .footer-brand > p { font-family: var(--font-si); color: var(--text-muted); font-size: 0.8rem; line-height: 1.75; margin-bottom: 18px; }
+  .social-links { display: flex; gap: 10px; }
+  .social-links a { width: 36px; height: 36px; background: rgba(255,255,255,0.04); border: var(--border-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.82rem; transition: var(--transition); }
+  .social-links a:hover { background: rgba(212,175,55,0.12); border-color: var(--accent); color: var(--accent); }
+  .footer-links h4 { font-family: var(--font-si); color: var(--accent); font-size: 0.92rem; margin-bottom: 14px; }
+  .footer-links ul { display: flex; flex-direction: column; gap: 8px; }
+  .footer-links ul a { font-family: var(--font-si); color: var(--text-muted); font-size: 0.82rem; display: flex; align-items: center; gap: 7px; transition: var(--transition); }
+  .footer-links ul a:hover { color: var(--accent); padding-left: 4px; }
+  .footer-blessing-card { background: rgba(212,175,55,0.05); border: var(--border-gold); border-radius: 8px; padding: 20px; }
+  .footer-blessing-card h4 { font-family: var(--font-si); color: var(--accent); margin-bottom: 12px; font-size: 0.95rem; }
+  .blessing-quote { font-family: var(--font-si); color: var(--text-light); font-size: 0.86rem; line-height: 1.85; margin-bottom: 10px; }
+  .blessing-trans { font-family: var(--font-si); color: var(--text-muted); font-size: 0.8rem; line-height: 1.7; }
+  .footer-bottom { background: rgba(0,0,0,0.45); padding: 18px 24px; border-top: 1px solid rgba(212,175,55,0.1); text-align: center; }
+  .footer-bottom p { color: var(--text-muted); font-size: 0.75rem; }
+
+  /* ===================================================
+     SCROLL REVEAL
+  =================================================== */
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ===================================================
+     TABLET — 1024px
+  =================================================== */
+  @media (max-width: 1024px) {
+    .about-grid { grid-template-columns: 1fr; gap: 30px; }
+    .about-image-card { order: -1; max-width: 420px; margin: 0 auto; }
+    .pageant-grid { grid-template-columns: repeat(2, 1fr); }
+    .reflections-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+    .footer-blessing-card { grid-column: 1 / -1; }
+  }
+
+  /* ===================================================
+     MOBILE — 768px
+  =================================================== */
+  @media (max-width: 768px) {
+    /* Nav */
+    .nav-toggle { display: flex; }
+    .eng-title { display: none; }
+
+    .nav-menu {
+      position: fixed; top: 68px; left: 0; right: 0;
+      background: rgba(8,3,4,0.98); border-bottom: var(--border-gold);
+      max-height: 0; overflow: hidden; transition: max-height 0.35s ease;
+      backdrop-filter: blur(14px); z-index: 999;
+    }
+    .nav-menu.open { max-height: 420px; }
+    .nav-menu ul { flex-direction: column; padding: 10px 0; gap: 0; }
+    .nav-menu ul li { width: 100%; }
+    .nav-menu ul li a { padding: 13px 24px; flex-direction: row; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.88rem; border-radius: 0; }
+    .en-nav { font-size: 0.72rem; }
+
+    /* Hero */
+    .hero-content { padding: 95px 20px 70px; }
+    .hero-actions { flex-direction: column; align-items: center; }
+    .hero-actions .btn { width: 100%; max-width: 280px; }
+
+    /* Sections */
+    .section-pad { padding: 55px 0; }
+    .about-section, .pageant-section, .reflections-section, .gallery-section, .schedule-section, .contact-section { padding: 55px 0; }
+
+    /* Pageant */
+    .pageant-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .card-image { height: 155px; }
+
+    /* Reflections */
+    .reflections-grid { grid-template-columns: 1fr; }
+
+    /* Gallery */
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .gallery-filters { overflow-x: auto; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 10px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .gallery-filters::-webkit-scrollbar { display: none; }
+    .filter-btn { white-space: nowrap; flex-shrink: 0; }
+
+    /* Timeline */
+    .schedule-timeline { padding-left: 30px; }
+    .schedule-timeline::before { left: 9px; }
+    .timeline-badge { left: -38px; width: 22px; height: 22px; font-size: 0.68rem; }
+    .timeline-item.highlight .timeline-badge { left: -40px; width: 26px; height: 26px; }
+    .timeline-panel { padding: 16px; }
+
+    /* Traffic Warning */
+    .traffic-warning-box { flex-direction: column; gap: 12px; }
+
+    /* Invitation */
+    .invitation-text-box { padding: 20px 16px; }
+
+    /* Form */
+    .form-group-row { grid-template-columns: 1fr; }
+    .form-box { padding: 22px 16px; }
+
+    /* Footer */
+    .footer-grid { grid-template-columns: 1fr; gap: 22px; }
+    .footer-blessing-card { grid-column: auto; }
+
+    /* Audio - hide text on mobile */
+    .audio-control span { display: none; }
+
+    /* Lightbox arrows */
+    .lightbox-prev { left: 5px; }
+    .lightbox-next { right: 5px; }
+    .lightbox-arrow { padding: 10px 8px; font-size: 1.4rem; }
+  }
+
+  /* ===================================================
+     SMALL MOBILE — 480px
+  =================================================== */
+  @media (max-width: 480px) {
+    .header-container { height: 60px; }
+    .nav-menu { top: 60px; }
+    .sin-title { font-size: 0.8rem; }
+    .logo-icon { width: 32px; height: 32px; }
+
+    .hero-content { padding: 80px 16px 55px; }
+    .hero-year-badge { font-size: 0.76rem; }
+
+    /* Single column pageant on tiny screens */
+    .pageant-grid { grid-template-columns: 1fr; }
+    .card-image { height: 190px; }
+
+    /* Gallery stays 2-col for visual */
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+
+    /* Requests - stack */
+    .request-item { flex-direction: column; gap: 8px; }
+
+    /* Schedule */
+    .schedule-timeline { padding-left: 22px; }
+    .schedule-timeline::before { left: 6px; }
+    .timeline-badge { left: -28px; width: 18px; height: 18px; font-size: 0.6rem; }
+    .timeline-item.highlight .timeline-badge { left: -30px; width: 22px; height: 22px; }
+    .detailed-schedule-box li { font-size: 0.78rem; }
+
+    .blessing-banner { padding: 35px 16px; }
+    .support-banner { padding: 45px 16px; }
+    .about-section, .pageant-section, .reflections-section, .gallery-section, .schedule-section, .contact-section { padding: 45px 0; }
+
+    /* Lightbox full safe */
+    #lightbox-img { max-height: 70vh; }
+    .lightbox { padding: 10px; }
+  }
+  </style>
 </head>
 <body>
 
-    <!-- Gate Screen / Elegant Preloader -->
-    <div id="preloader">
-        <div class="preloader-content">
-            <div class="lamp-container">
-                <!-- SVG oil lamp drawing -->
-                <svg viewBox="0 0 100 100" class="oil-lamp">
-                    <path class="lamp-base" d="M20 70 C20 70, 50 85, 80 70 C80 50, 20 50, 20 70 Z" fill="none" stroke="#d4af37" stroke-width="3"/>
-                    <path class="lamp-stand" d="M45 78 L45 88 L35 88 L35 92 L65 92 L65 88 L55 88 L55 78" fill="none" stroke="#d4af37" stroke-width="3"/>
-                    <path class="wick" d="M50 50 L50 42" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                    <path class="flame" d="M50 40 C45 35, 45 25, 50 15 C55 25, 55 35, 50 40 Z" fill="#ff9900"/>
-                </svg>
-            </div>
-            <h2 class="preloader-title">සාදරයෙන් පිළිගනිමු</h2>
-            <p class="preloader-subtitle">Madurankuliya Sri Saranankararama Viharaya</p>
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
-            </div>
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="lamp-container">
+        <svg viewBox="0 0 100 100" class="oil-lamp">
+          <path d="M20 70 C20 70, 50 85, 80 70 C80 50, 20 50, 20 70 Z" fill="none" stroke="#d4af37" stroke-width="3"/>
+          <path d="M45 78 L45 88 L35 88 L35 92 L65 92 L65 88 L55 88 L55 78" fill="none" stroke="#d4af37" stroke-width="3"/>
+          <path d="M50 50 L50 42" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M50 40 C45 35, 45 25, 50 15 C55 25, 55 35, 50 40 Z" fill="#ff9900"/>
+        </svg>
+      </div>
+      <h2 class="preloader-title">සාදරයෙන් පිළිගනිමු</h2>
+      <p class="preloader-subtitle">Madurankuliya Sri Saranankararama Viharaya</p>
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- AUDIO CONTROL -->
+  <div class="audio-control" id="audio-toggle-btn" title="Traditional Background Sound">
+    <i class="fas fa-music"></i>
+    <span>නද/හේවිසි</span>
+    <audio id="bg-audio" loop src="https://assets.mixkit.co/active_storage/sfx/2568/2568-84.wav"></audio>
+  </div>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="#hero" class="logo-area">
+        <div class="logo-icon">
+          <svg viewBox="0 0 50 50" class="lotus-logo">
+            <path d="M25 5 C22 15, 15 20, 25 45 C35 20, 28 15, 25 5 Z" fill="#d4af37"/>
+            <path d="M25 15 C15 22, 10 32, 25 45 C40 32, 35 22, 25 15 Z" fill="#b59123" opacity="0.8"/>
+            <path d="M25 25 C8 30, 8 40, 25 45 C42 40, 42 30, 25 25 Z" fill="#937213" opacity="0.6"/>
+          </svg>
         </div>
+        <div class="logo-text">
+          <span class="sin-title">ශ්‍රී සරණංකරාරාමය</span>
+          <span class="eng-title">SRI SARANANKARARAMAYA</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="#hero" class="active">මුල් පිටුව <span class="en-nav">Home</span></a></li>
+          <li><a href="#about">විහාර ඉතිහාසය <span class="en-nav">History</span></a></li>
+          <li><a href="#pageant">සංස්කෘතිකාංග <span class="en-nav">Pageant</span></a></li>
+          <li><a href="#reflections">ශාසනික සිතුවිලි <span class="en-nav">Reflections</span></a></li>
+          <li><a href="#gallery">මාධ්‍ය ගැලරිය <span class="en-nav">Media</span></a></li>
+          <li><a href="#route">කාලසටහන <span class="en-nav">Schedule</span></a></li>
+          <li><a href="#contact">සබඳතා <span class="en-nav">Contact</span></a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- Background Traditional Audio Button -->
-    <div class="audio-control" id="audio-toggle-btn" title="Traditional Background Sound">
-        <i class="fas fa-music"></i>
-        <span>නද/හේවිසි</span>
-        <audio id="bg-audio" loop src="https://assets.mixkit.co/active_storage/sfx/2568/2568-84.wav"></audio> <!-- Fallback simple chime/drum effect, can be played on interaction -->
+  <!-- HERO -->
+  <section id="hero" class="hero-section">
+    <div class="hero-slider">
+      <div class="slide active" style="background-image: linear-gradient(rgba(13,6,8,0.4),rgba(13,6,8,0.88)), url('4 Karaduwa Vadammana Hasthi Rajaya.jpg');"></div>
+      <div class="slide" style="background-image: linear-gradient(rgba(13,6,8,0.4),rgba(13,6,8,0.88)), url('2 Pantheru Natuma.jpg');"></div>
+      <div class="slide" style="background-image: linear-gradient(rgba(13,6,8,0.4),rgba(13,6,8,0.88)), url('1 Horane karuvan.jpg');"></div>
     </div>
+    <div class="hero-content">
+      <div class="decoration-top">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' fill='%23d4af37'><path d='M0,10 Q50,0 100,10 T200,10 L200,20 L0,20 Z' opacity='0.5'/></svg>" alt="" class="border-motif">
+      </div>
+      <p class="hero-year-badge">76 වන පෙරහැර | 2026</p>
+      <h1 class="hero-main-title">
+        <span class="line-1">මදුරන්කුලිය ශ්‍රී සරණංකරාරාම</span>
+        <span class="line-2">ඓතිහාසික 76 වන අනුබුදු මිහිඳු මහා පෙරහැර</span>
+        <span class="line-en">Madurankuliya Sri Saranankararama 76th Mihindu Perahera</span>
+      </h1>
+      <p class="hero-desc">ශාසනික සහ සංස්කෘතික උරුමයන් සුරකිමින්, මිහිඳු මහ රහතන් වහන්සේගේ ලංකාගමනය සිහිපත් කරමින් 76 වන වරටත් පවත්වනු ලබන මදුරන්කුලියේ මහා සංස්කෘතික මංගල්‍යය.</p>
+      <div class="hero-actions">
+        <a href="#gallery" class="btn btn-primary"><i class="fas fa-images"></i> ගැලරිය නරඹන්න <span class="btn-sub">View Gallery</span></a>
+        <a href="#route" class="btn btn-secondary"><i class="fas fa-calendar-alt"></i> කාලසටහන <span class="btn-sub">Schedule</span></a>
+      </div>
+      <div class="scroll-indicator">
+        <span>පහළට / Scroll</span>
+        <i class="fas fa-chevron-down animate-bounce"></i>
+      </div>
+    </div>
+    <div class="hero-bottom-curve">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,120L0,120Z" fill="#1a0f10"></path>
+      </svg>
+    </div>
+  </section>
 
-    <!-- Header Navigation -->
-    <header class="main-header">
-        <div class="header-container">
-            <a href="#" class="logo-area">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 50 50" class="lotus-logo">
-                        <path d="M25 5 C22 15, 15 20, 25 45 C35 20, 28 15, 25 5 Z" fill="#d4af37"/>
-                        <path d="M25 15 C15 22, 10 32, 25 45 C40 32, 35 22, 25 15 Z" fill="#b59123" opacity="0.8"/>
-                        <path d="M25 25 C8 30, 8 40, 25 45 C42 40, 42 30, 25 25 Z" fill="#937213" opacity="0.6"/>
-                    </svg>
-                </div>
-                <div class="logo-text">
-                    <span class="sin-title">ශ්‍රී සරණංකරාරාමය</span>
-                    <span class="eng-title">SRI SARANANKARARAMAYA</span>
-                </div>
-            </a>
+  <!-- BLESSING BANNER -->
+  <section class="blessing-banner">
+    <div class="container text-center">
+      <h3 class="blessing-text">"සබ්බදානං ධම්මදානං ජිනාති"</h3>
+      <p class="blessing-translation">සියලු දානයන් අතරින් ධර්ම දානය උතුම් වන්නේය.</p>
+      <div class="floral-separator"><span>—</span><span>✿</span><span>—</span></div>
+    </div>
+  </section>
 
-            <!-- Mobile Hamburger Menu Button -->
-            <button class="nav-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
-                <span class="hamburger"></span>
-            </button>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text-content">
+          <div class="section-title-area">
+            <span class="sub-title">ඓතිහාසික පසුබිම | Historical Significance</span>
+            <h2 class="section-title">මිහිඳු පෙරහැරේ ශාසනික වටිනාකම</h2>
+            <div class="title-line"></div>
+          </div>
+          <p class="highlighted-para">අනුබුදු මිහිඳු මහා රහතන් වහන්සේගේ ලංකාගමනයත් සමඟ මෙරට ඇති වූ ආගමික හා සාමාජීය විප්ලවය අනුස්මරණය කරනු වස් වාර්ෂිකව මදුරන්කුලිය ශ්‍රී සරණංකරාරාම විහාරස්ථානයේ දී මෙම පුණ්‍ය මහෝත්සවය 76 වන වරටත් උත්කර්ෂවත් ලෙස සංවිධානය කෙරේ.</p>
+          <p>මදුරන්කුලිය ප්‍රදේශයට දිගු ඉතිහාසයක් හිමි අතර, ශ්‍රී සරණංකරාරාම විහාරස්ථානය ප්‍රදේශයේ බොදු ජනතාවගේ මුදුන් මල්කඩක් බඳු පූජනීය ස්ථානයකි. මෙම ඓතිහාසික පුණ්‍ය මහෝත්සවය, විහාරාධිපති <strong>පූජ්‍ය මහකුඹුක්කඩවල සිරිනන්ද හිමිපාණන් වහන්සේගේ</strong> අනුශාසනාව යටතේ සරණංකර දායක සභාව මඟින් සංවිධානය කරනු ලබයි.</p>
+          <div class="temple-features">
+            <div class="feature-item reveal">
+              <div class="feature-icon"><i class="fas fa-dharmachakra"></i></div>
+              <div class="feature-desc"><h4>බෞද්ධ පුනර්ජීවනය</h4><p>ප්‍රදේශයේ ධර්ම ප්‍රචාරක කටයුතු හා ආගමික හැදියාව නංවාලීම.</p></div>
+            </div>
+            <div class="feature-item reveal">
+              <div class="feature-icon"><i class="fas fa-drum"></i></div>
+              <div class="feature-desc"><h4>හෙළ උරුමය</h4><p>උඩරට, පහතරට සහ සබරගමු සාම්ප්‍රදායික නර්තන කලාව සුරැකීම.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="about-image-card reveal">
+          <div class="gold-frame">
+            <img src="23 Madurankuliya viharastaanaya.jpg" alt="Sri Saranankararamaya Temple">
+            <div class="frame-corner top-left"></div>
+            <div class="frame-corner top-right"></div>
+            <div class="frame-corner bottom-left"></div>
+            <div class="frame-corner bottom-right"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <!-- Navigation Links -->
-            <nav class="nav-menu" id="nav-menu">
+  <!-- PAGEANT SECTION -->
+  <section id="pageant" class="pageant-section">
+    <div class="container">
+      <div class="section-title-area text-center">
+        <span class="sub-title">පෙරහැර මංගල්‍යයේ අංග | The Pageant Elements</span>
+        <h2 class="section-title">මහා සංස්කෘතික පෙරහැරේ පෙළගැස්ම</h2>
+        <div class="title-line center"></div>
+      </div>
+      <div class="pageant-grid">
+        <div class="pageant-card reveal">
+          <div class="card-image" style="background-image: url('1 Horane karuvan.jpg');"><div class="card-overlay"></div><div class="card-icon"><i class="fas fa-drum"></i></div></div>
+          <div class="card-content"><h4>හේවිසි කරුවන්</h4><p>Hewisi Musicians</p></div>
+        </div>
+        <div class="pageant-card reveal">
+          <div class="card-image" style="background-image: url('18 Maha Sangarathnaya saha Nilamevarun.jpg');"><div class="card-overlay"></div><div class="card-icon"><i class="fas fa-hands"></i></div></div>
+          <div class="card-content"><h4>විහාරාධිපති හිමි ඇතුළු මහා සංඝරත්නය</h4><p>Maha Sangha & Monks</p></div>
+        </div>
+        <div class="pageant-card highlight reveal">
+          <div class="card-image" style="background-image: url('4 Karaduwa Vadammana Hasthi Rajaya.jpg');"><div class="card-overlay"></div><span class="featured-badge">පෙරහැර</span><div class="card-icon"><i class="fas fa-sun"></i></div></div>
+          <div class="card-content"><h4>කරඬුව වැඩමවන හස්ති රාජයා</h4><p>Casket Bearing Elephant</p></div>
+        </div>
+        <div class="pageant-card reveal">
+          <div class="card-image" style="background-image: url('5 Udarata Ves Narthanaya.jpg');"><div class="card-overlay"></div><div class="card-icon"><i class="fas fa-walking"></i></div></div>
+          <div class="card-content"><h4>උඩරට නර්තන ශිල්පීන්</h4><p>Kandyan Dancers</p></div>
+        </div>
+        <div class="pageant-card reveal">
+          <div class="card-image" style="background-image: url('7 Kulu Natuma.jpg');"><div class="card-overlay"></div><div class="card-icon"><i class="fas fa-users"></i></div></div>
+          <div class="card-content"><h4>කුළු නැටුම</h4><p>Traditional Kulu Dance</p></div>
+        </div>
+        <div class="pageant-card reveal">
+          <div class="card-image" style="background-image: url('9 Giniboolakaruvan.jpg');"><div class="card-overlay"></div><div class="card-icon"><i class="fas fa-fire"></i></div></div>
+          <div class="card-content"><h4>ගිනි බෝල කරුවන්</h4><p>Fireball Dancers</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFLECTIONS SECTION -->
+  <section id="reflections" class="reflections-section">
+    <div class="container">
+      <div class="section-title-area text-center">
+        <span class="sub-title">ශාසනික සන්නිවේදනය | Spiritual Messages</span>
+        <h2 class="section-title">මිහිඳු පෙරහැර විභූතියේ ශාසනික පණිවිඩ</h2>
+        <div class="title-line center"></div>
+      </div>
+      <div class="reflections-grid">
+        <div class="reflection-card reveal"><div class="reflection-card-header"><div class="reflection-num">1</div><h4>පූර්ව ආරාධනාව සහ තෙරුවන් සරණ <span class="en-ref-title">Morning Blessing & Invitation</span></h4></div><p class="reflection-body-text">පොසොන් පොහෝ දින තෙරුවන් සරණ පතමින්, 76 වන මිහිඳු පෙරහැරේ ශාසනික වැදගත්කම සිහිපත් කිරීම. අකුසලයෙන් වැළකී කුසල් රැස් කිරීම බුදුවදනයි.</p><p class="reflection-body-text en">"Sabbapāpassa akaraṇaṁ, kusalassa upasampadā" – Avoid all evil, cultivate the good.</p></div>
+        <div class="reflection-card reveal"><div class="reflection-card-header"><div class="reflection-num">2</div><h4>අනුබුදු මිහිඳු හිමියන්ගේ ලංකාගමනය <span class="en-ref-title">Remembering Arahant Mahinda</span></h4></div><p class="reflection-body-text">මිහින්තලා පුදබිමේදී දේවානම්පියතිස්ස රජතුමා මුණගැසී ලක්දිව ඉතිහාසය වෙනස් කළ අනුබුදු මිහිඳු මහා රහතන් වහන්සේගේ ඥානාන්විත දේශනය.</p><p class="reflection-body-text en">"Appamādo amatapadaṁ" – Heedfulness is the path to the deathless.</p></div>
+        <div class="reflection-card reveal"><div class="reflection-card-header"><div class="reflection-num">3</div><h4>පොසොන් පොහෝ දින අර්ථය <span class="en-ref-title">Poson Day Meaning</span></h4></div><p class="reflection-body-text">ලක්දිවට බුදුදහම උරුම කරදුන් පොසොන් පොහෝ දිනයේ ශාසනික පුනරුදය සැමරීම. ධර්මය රකින්නා ධර්මය විසින්ම රකිනු ලබයි.</p><p class="reflection-body-text en">"Dhammo have rakkhati dhammacāriṁ" – The Dhamma protects those who live by it.</p></div>
+        <div class="reflection-card reveal"><div class="reflection-card-header"><div class="reflection-num">4</div><h4>විහාරස්ථ ශාසනික උරුමය <span class="en-ref-title">Temple Heritage</span></h4></div><p class="reflection-body-text">ශ්‍රී සරණංකරාරාම විහාරස්ථානය දශක ගණනාවක් පුරා ශාසනික පහන් ටැඹක් ලෙස කටයුතු කරමින් හෙළ උරුමය සුරැකීමට දරන උත්සාහය.</p><p class="reflection-body-text en">"Saṅghassa dānaṁ mahapphalaṁ" – Giving to the Sangha brings great merit.</p></div>
+        <div class="reflection-card reveal"><div class="reflection-card-header"><div class="reflection-num">5</div><h4>සාමාජීය සාමය සහ සමඟිය <span class="en-ref-title">Community Spirit</span></h4></div><p class="reflection-body-text">සමඟිය උතුම්ම ආශිර්වාදයයි. මදුරන්කුලිය බොදු ජනතාව වසර 76ක් පුරා මෙම පෙරහැර පවත්වමින් සාමාජීය සමඟිය තහවුරු කරයි.</p><p class="reflection-body-text en">Teachings of the Buddha encourage harmony: "Concord is the highest blessing."</p></div>
+        <div class="reflection-card reveal"><div class="reflection-card-header"><div class="reflection-num">6</div><h4>පෙරහැර සංස්කෘතික විචිත්‍රත්වය <span class="en-ref-title">Perahera Events</span></h4></div><p class="reflection-body-text">ගිනි බෝල, සැරසූ පාපැදි, උඩරට පහතරට නර්තනයන්ගෙන් විචිත්‍රවත් වන පෙරහැර මංගල්‍යය.</p><p class="reflection-body-text en">"Cittaṁ dantaṁ sukhāvahaṁ" – A well-trained mind brings happiness.</p></div>
+        <div class="reflection-card reveal"><div class="reflection-card-header"><div class="reflection-num">7</div><h4>ළමා පරපුර බොදු මඟට යොමු කිරීම <span class="en-ref-title">Poson Blessings for Children</span></h4></div><p class="reflection-body-text">පාසල් දරුවන් සැරසූ පාපැදි මඟින් පෙරහැර අලංකාර කරමින් හෙළ සංස්කෘතික දායාදය ඊළඟ පරපුරට දීම.</p><p class="reflection-body-text en">"Sīlaṁ rakkhati sobhanaṁ" – Virtue protects the beautiful.</p></div>
+        <div class="reflection-card reveal"><div class="reflection-card-header"><div class="reflection-num">8</div><h4>ධර්මාශෝක රජුගේ ධර්ම දූත සේවය <span class="en-ref-title">Emperor Dharmashoka & Peace</span></h4></div><p class="reflection-body-text">යුධ ජයග්‍රහණයෙන් පසු ධර්ම විජය ඔස්සේ ලොවට සාමය බෙදාහැර, මිහිඳු හිමියන් මෙරටට එවූ ධර්මාශෝක අධිරාජයාගේ දූත මෙහෙවර.</p><p class="reflection-body-text en">"Na hi verena verāni" – Hatred is never appeased by hatred.</p></div>
+        <div class="reflection-card reveal"><div class="reflection-card-header"><div class="reflection-num">9</div><h4>එදිනෙදා ජීවිතයට බුදු දහම <span class="en-ref-title">Dharma for Daily Life</span></h4></div><p class="reflection-body-text">බුදුදහමේ ඉගැන්වීම් එදිනෙදා ජීවිතයට ගලපාගෙන ධාර්මිකව ජීවත්වීම උතුම් වේ.</p><p class="reflection-body-text en">"Matta-sukhapariccāgā, passe ce vipulaṁ sukhaṁ" – Give up small pleasures for greater joy.</p></div>
+        <div class="reflection-card reveal"><div class="reflection-card-header"><div class="reflection-num">10</div><h4>බැතිමතුන්ට අවසන් මතක් කිරීම <span class="en-ref-title">Final Call to Devotees</span></h4></div><p class="reflection-body-text">තෙරුවන් සරණ යමින්, මෙත් සිතින් හා බුද්ධ භක්තියෙන් යුතුව පෙරහැර සාධුකාර මධ්‍යයේ පිළිගැනීම.</p><p class="reflection-body-text en">"Buddhaṁ saraṇaṁ gacchāmi" – Stand with flowers and metta in your hearts.</p></div>
+      </div>
+
+      <div class="requests-banner">
+        <h3>මහජනතාවගෙන් කාරුණික ඉල්ලීම්</h3>
+        <span class="en-title">Respectful Requests to the Public</span>
+        <div class="requests-list">
+          <div class="request-item reveal"><div class="request-badge">1</div><div class="request-text"><h5>මාර්ග සහ පදික වේදිකා නිදහස්ව තැබීම</h5><p>ඓතිහාසික පෙරහැර මංගල්‍යය සුමටව ගමන් කිරීම සඳහා මාර්ග සහ පදික වේදිකා නිදහස්ව තබන්න.</p><p class="en">Kindly make space along the roads and pavements to allow the procession to pass smoothly.</p></div></div>
+          <div class="request-item reveal"><div class="request-badge">2</div><div class="request-text"><h5>නර්තන ශිල්පීන්ට ඉඩ සැලසීම</h5><p>නර්තන ශිල්පීන්ට, කලාකරුවන්ට සහ අලි ඇතුන්ට බාධාවකින් තොරව ගමන් කිරීමට ඉඩ ලබා දෙන්න.</p><p class="en">Kindly ask families and children to step aside and make way for dancers, elephants, and performers.</p></div></div>
+          <div class="request-item reveal"><div class="request-badge">3</div><div class="request-text"><h5>ගෞරවාන්විතව රැඳී සිටීම</h5><p>පෙරහැර සවස 7.00 ට ආරම්භ වන බැවින් කල්වේලා ඇතිව මඟ දෙපස ගෞරවාන්විතව රැඳී සිටින්න.</p><p class="en">Please cooperate by giving enough space and standing respectfully to witness this sacred journey.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-title-area text-center">
+        <span class="sub-title">ඡායාරූප සහ වීඩියෝ | Media Hub</span>
+        <h2 class="section-title">ඓතිහාසික පෙරහැර මතකයන්</h2>
+        <div class="title-line center"></div>
+      </div>
+
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">සියල්ල <span class="en-tab">All Media</span></button>
+        <button class="filter-btn" data-filter="featured">විශේෂිත <span class="en-tab">Featured</span></button>
+        <button class="filter-btn" data-filter="dancers">නර්තන <span class="en-tab">Dancers</span></button>
+        <button class="filter-btn" data-filter="elephants">අලි ඇතුන් <span class="en-tab">Elephants</span></button>
+        <button class="filter-btn" data-filter="video">වීඩියෝ <span class="en-tab">Videos</span></button>
+      </div>
+
+      <div class="video-container-wrap">
+        <h3 class="video-section-title"><i class="fas fa-video"></i> පෙරහැර වීඩියෝ දර්ශන | Perahera Video Highlights</h3>
+        <div class="video-box-gold">
+          <video id="perahera-video" controls poster="4 Karaduwa Vadammana Hasthi Rajaya.jpg" class="main-video" playsinline>
+            <source src="3 2026 Perahera Vistaraya.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-custom-overlay" id="video-overlay">
+            <div class="play-btn-circle"><i class="fas fa-play"></i></div>
+            <p>මිහිඳු පෙරහැර සජීවී දර්ශන නැරඹීමට ක්ලික් කරන්න</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <div class="gallery-item featured" data-src="20 Viharasthanaye Budupilima vahanse.jpg" data-caption="බුද්ධ ප්‍රතිමා වහන්සේ - ශ්‍රී සරණංකරාරාමය"><img src="20 Viharasthanaye Budupilima vahanse.jpg" alt="Buddha Statue" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">බුද්ධ ප්‍රතිමා වහන්සේ</p></div></div>
+        <div class="gallery-item featured" data-src="23 Madurankuliya viharastaanaya.jpg" data-caption="ඓතිහාසික මදුරන්කුලිය ශ්‍රී සරණංකරාරාම විහාර භූමිය"><img src="23 Madurankuliya viharastaanaya.jpg" alt="Temple" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">විහාරස්ථ පරිශ්‍රය</p></div></div>
+        <div class="gallery-item featured" data-src="19 Vihaarastaanaye Chaithya Rajayaa.jpg" data-caption="විහාරස්ථ සෑ රජුන් වහන්සේ"><img src="19 Vihaarastaanaye Chaithya Rajayaa.jpg" alt="Stupa" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">විහාරස්ථ වෙහෙර</p></div></div>
+        <div class="gallery-item featured elephants" data-src="4 Karaduwa Vadammana Hasthi Rajaya.jpg" data-caption="2026 ඓතිහාසික 76 වන මිහිඳු මහා පෙරහැරේ මංගල හස්ති රාජයා"><img src="4 Karaduwa Vadammana Hasthi Rajaya.jpg" alt="Elephant 2026" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">මංගල හස්ති රාජයා (2026)</p></div></div>
+        <div class="gallery-item featured dancers" data-src="1 Horane karuvan.jpg" data-caption="හේවිසි වාදන ශිල්පීන් - ශ්‍රී සරණංකර විහාරස්ථානය"><img src="1 Horane karuvan.jpg" alt="Hewisi Musicians" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">හේවිසි වාදකයින්</p></div></div>
+        <div class="gallery-item dancers" data-src="11 Ves Narthanaya.jpg" data-caption="සාම්ප්‍රදායික වෙස් නර්තන ශිල්පියෙකු"><img src="11 Ves Narthanaya.jpg" alt="Ves Dancer" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">වෙස් නර්තන ශිල්පියා</p></div></div>
+        <div class="gallery-item dancers" data-src="5 Udarata Ves Narthanaya.jpg" data-caption="ලාලිත්‍යවත් වන්දනා නර්තනය - කාන්තා කණ්ඩායම"><img src="5 Udarata Ves Narthanaya.jpg" alt="Female Dancers" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">කාන්තා නර්තනය</p></div></div>
+        <div class="gallery-item dancers" data-src="13 Ves Narthanaya.jpg" data-caption="නම්‍යශීලී නර්තන රටා"><img src="13 Ves Narthanaya.jpg" alt="Traditional Dance" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">නර්තන රටා</p></div></div>
+        <div class="gallery-item dancers" data-src="6 Payimpath Narthanaya.jpg" data-caption="උඩරට නර්තන කණ්ඩායම"><img src="6 Payimpath Narthanaya.jpg" alt="Kandyan Dancers" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">උඩරට නර්තන</p></div></div>
+        <div class="gallery-item dancers" data-src="7 Kulu Natuma.jpg" data-caption="පහතරට නර්තන කලා"><img src="7 Kulu Natuma.jpg" alt="Kulu Dance" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">කුළු නර්තන</p></div></div>
+        <div class="gallery-item dancers" data-src="8 Monara Natuma.jpg" data-caption="මයුර නර්තන (Peacock Dance)"><img src="8 Monara Natuma.jpg" alt="Peacock Dance" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">මයුර නර්තනය</p></div></div>
+        <div class="gallery-item featured" data-src="9 Giniboolakaruvan.jpg" data-caption="ගිනිබෝල කරුවන් - පෙරහැර ආරම්භය"><img src="9 Giniboolakaruvan.jpg" alt="Fireball" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">ගිනිබෝල කරුවන්</p></div></div>
+        <div class="gallery-item" data-src="10 Giniboolakaruvan.jpg" data-caption="ගිනි බෝල කරුවන්"><img src="10 Giniboolakaruvan.jpg" alt="Fireball 2" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">ගිනි බෝල</p></div></div>
+        <div class="gallery-item dancers" data-src="14 Ves Narthanaya.jpg" data-caption="සාම්ප්‍රදායික වෙස් නර්තන කණ්ඩායම"><img src="14 Ves Narthanaya.jpg" alt="Ves Dancers" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">වෙස් නර්තන</p></div></div>
+        <div class="gallery-item featured" data-src="18 Maha Sangarathnaya saha Nilamevarun.jpg" data-caption="මහා සංඝරත්නය සහ නිලමේවරුන් පෙරහැරේ ගමන් කිරීම"><img src="18 Maha Sangarathnaya saha Nilamevarun.jpg" alt="Maha Sangha" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">සංඝරත්නය</p></div></div>
+        <div class="gallery-item" data-src="15 Mal Bicycle karuvan.jpg" data-caption="සැරසූ මල් පාපැදි (Decorated Bicycles)"><img src="15 Mal Bicycle karuvan.jpg" alt="Bicycles" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">සැරසූ පාපැදි</p></div></div>
+        <div class="gallery-item featured" data-src="16 Karadu Vahanse tanpath kirima.jpg" data-caption="ධාතු කරඬුව තැන්පත් කිරීම"><img src="16 Karadu Vahanse tanpath kirima.jpg" alt="Casket" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">ධාතු කරඬුව</p></div></div>
+        <div class="gallery-item" data-src="21 Viharasthanaye Boodinvahanse 1.jpg" data-caption="විහාරස්ථ බෝධීන් වහන්සේ"><img src="21 Viharasthanaye Boodinvahanse 1.jpg" alt="Bodhi Tree 1" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">බෝධීන් වහන්සේ</p></div></div>
+        <div class="gallery-item" data-src="22 Viharasthanaye Boodin vahanse 2.jpg" data-caption="විහාරස්ථ බෝධීන් වහන්සේ (රාත්‍රී)"><img src="22 Viharasthanaye Boodin vahanse 2.jpg" alt="Bodhi Tree Night" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">බෝධීන් (රාත්‍රී)</p></div></div>
+        <div class="gallery-item dancers" data-src="17 Kulu Narthanaya.jpg" data-caption="කුළු නර්තන කණ්ඩායම"><img src="17 Kulu Narthanaya.jpg" alt="Kulu Dancers" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">කුළු නර්තන</p></div></div>
+        <div class="gallery-item dancers" data-src="2 Pantheru Natuma.jpg" data-caption="පැන්තරු නර්තන කණ්ඩායම"><img src="2 Pantheru Natuma.jpg" alt="Pantheru" loading="lazy"><div class="gallery-item-hover"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><p class="img-desc">පැන්තරු නර්තන</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <span class="lightbox-arrow lightbox-prev" id="lightbox-prev">&#10094;</span>
+    <span class="lightbox-arrow lightbox-next" id="lightbox-next">&#10095;</span>
+    <div class="lightbox-content-box">
+      <img id="lightbox-img" src="" alt="Gallery Image">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- SCHEDULE SECTION -->
+  <section id="route" class="schedule-section">
+    <div class="container">
+      <div class="invitation-text-box">
+        <span class="sub-title">බැතිබර ආරාධනය | Official Invitation</span>
+        <h3>76 වන මිහිඳු මහා පෙරහැර මංගල්‍යය</h3>
+        <p>පුත්තලම මදුරන්කුලිය ශ්‍රී සරණංකරාරාම විහාරස්ථානය විසින් 76 වන වරටත් සංවිධානය කරනු ලබන, අනුබුදු මිහිඳු මහා පෙරහැර.</p>
+        <p>උඩරට, පහතරට, සබරගමුව සහ නව නිර්මාණ නර්තනාංග, අලි ඇතුන්, ෆේස්බුක් සජීවීකරණ, විදුලි ආලෝකකරණය ඇතුළු විවිධ අංගවලින් සමන්විත, අති උත්කර්ෂවත් පෙරහැරක් සංචාරය කෙරෙනු ඇත.</p>
+        <p>පෙර නොවූ විරූ ලෙස අප ප්‍රදේශයේ එළිදැක්වෙන, මේ අපූර්ව සංස්කෘතිකමය මංගල්‍යය නැරඹීමට ඔබ සැමට බැති සිතින් ආරාධනා!</p>
+      </div>
+
+      <div class="section-title-area text-center">
+        <span class="sub-title">ගමන් මඟ සහ කාලසටහන | Schedule & Route</span>
+        <h2 class="section-title">ඓතිහාසික 76 වන මිහිඳු මහා පෙරහැර</h2>
+        <div class="title-line center"></div>
+      </div>
+
+      <div class="schedule-timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-badge">1</div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <span class="date-badge"><i class="far fa-calendar-alt"></i> 2026 ජූනි 27 (June 27)</span>
+              <h4>රාත්‍රී සර්කස් සංදර්ශන මාලාව</h4>
+              <span class="en-timeline-title">Grand Night Circus Show Series</span>
+            </div>
+            <div class="timeline-body"><p>2026 ජූනි මස 27 වන දින, රාත්‍රී සර්කස් සංදර්ශන මාලාව.</p></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-badge">2</div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <span class="date-badge"><i class="far fa-calendar-alt"></i> 2026 ජූනි 28 (June 28)</span>
+              <h4>සර්කස්, නාට්‍ය, භාණ්ඩ සල්පිල් සහ ගී ප්‍රසංගය</h4>
+              <span class="en-timeline-title">Circus, Drama, Auction & Musical Concert</span>
+            </div>
+            <div class="timeline-body"><p>2026 ජූනි මස 28 වන දින, සර්කස් සංදර්ශන සමඟින් වයඹ දේවිමිණි කලා සංගමය මඟින් ඉදිරිපත් කරන, නාට්‍ය සහ භාණ්ඩ සල්පිල් වෙන්දේසිය සමඟින් ආධුනික ගී ප්‍රසංගයද පැවැත්වේ.</p></div>
+          </div>
+        </div>
+
+        <div class="timeline-item highlight reveal">
+          <div class="timeline-badge"><i class="fas fa-star"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <span class="date-badge gold"><i class="far fa-calendar-alt"></i> 2026 ජූනි 29 (June 29) — ප්‍රධාන දිනය!</span>
+              <h4>ඓතිහාසික 76 වන අනුබුදු මිහිඳු මහා වීදි පෙරහැර</h4>
+              <span class="en-timeline-title">Grand 76th Mihindu Maha Perahera Street Parade</span>
+            </div>
+            <div class="timeline-body">
+              <p>පුත්තලම මදුරන්කුලිය ශ්‍රී සරණංකරාරාම විහාරස්ථානය විසින් 76 වන වරටත් සංවිධානය කරනු ලබන, අනුබුදු මිහිඳු මහා පෙරහැර. පෙර නොවූ විරූ ලෙස, අශ්වාරෝහකයින්, ගිනිබෝල, ෆේස්බුක් live, ආලෝකකරණය ඇතුළු අංග 1200කින් සමන්විතයි.</p>
+              <div class="detailed-schedule-box">
+                <h5><i class="fas fa-list-ol"></i> පෙරහැර දින වැඩසටහන් පෙළගැස්ම:</h5>
                 <ul>
-                    <li><a href="#hero" class="active">මුල් පිටුව <span class="en-nav">Home</span></a></li>
-                    <li><a href="#about">විහාර ඉතිහාසය <span class="en-nav">History</span></a></li>
-                    <li><a href="#pageant">සංස්කෘතිකාංග <span class="en-nav">Pageant</span></a></li>
-                    <li><a href="#reflections">ශාසනික සිතුවිලි <span class="en-nav">Reflections</span></a></li>
-                    <li><a href="#gallery">මාධ්‍ය ගැලරිය <span class="en-nav">Media</span></a></li>
-                    <li><a href="#route">කාලසටහන <span class="en-nav">Schedule</span></a></li>
-                    <li><a href="#contact">සබඳතා <span class="en-nav">Contact</span></a></li>
+                  <li><strong>ප.ව. 5.30</strong> — පෙරහැර පෙළ ගැස්ම ඇරඹීම (Lineup begins)</li>
+                  <li><strong>ප.ව. 5.55</strong> — සධාතුක කරඬුව මංගල හස්තියා මත තැබීම (පිරිත් පැන් ඉසීම)</li>
+                  <li><strong>ප.ව. 6.00</strong> — මිහිඳු හිමි අනුරුවට මල් පූජාව සහ අසුන් ගැන්වීම</li>
+                  <li><strong>ප.ව. 6.10</strong> — පිළිගැනීමේ කථාව — දායක සභාවේ සභාපති චන්න රත්නායක</li>
+                  <li><strong>ප.ව. 6.15</strong> — පංචශීලය හා අනුශාසනාව — විහාරාධිපති පූජ්‍ය සිරිනන්ද හිමිපාණන්</li>
+                  <li><strong>ප.ව. 6.25</strong> — ආරාධිත කථාව — අමාත්‍ය මහාචාර්ය චන්දන අබේරත්න</li>
+                  <li><strong>ප.ව. 7.00</strong> — ඓතිහාසික වීදි පෙරහැර සංචාරය ආරම්භ කිරීම!</li>
                 </ul>
-            </nav>
+              </div>
+              <div class="route-details" style="margin-top:14px;"><strong><i class="fas fa-map-marker-alt"></i> ගමන් මඟ:</strong> විහාරස්ථාන භූමියෙන් ආරම්භ වී, මදුරන්කුලිය නගර මධ්‍යයේ විශේෂ පීඨිකාව හරහා, ප්‍රධාන මාර්ගය ඔස්සේ, නැවත විහාරස්ථානයට (අලුයම් කාලයේ).</div>
+            </div>
+          </div>
         </div>
-    </header>
+      </div>
 
-    <!-- Hero Section with Slideshow Background -->
-    <section id="hero" class="hero-section">
-        <div class="hero-slider">
-            <div class="slide active" style="background-image: linear-gradient(rgba(26, 15, 16, 0.4), rgba(17, 8, 9, 0.85)), url('4 Karaduwa Vadammana Hasthi Rajaya.jpg');"></div>
-            <div class="slide" style="background-image: linear-gradient(rgba(26, 15, 16, 0.4), rgba(17, 8, 9, 0.85)), url('2 Pantheru Natuma.jpg');"></div>
-            <div class="slide" style="background-image: linear-gradient(rgba(26, 15, 16, 0.4), rgba(17, 8, 9, 0.85)), url('1 Horane karuvan.jpg');"></div>
+      <div class="traffic-warning-box">
+        <div class="warning-icon"><i class="fas fa-exclamation-triangle"></i></div>
+        <div class="warning-text">
+          <h5>විශේෂ මාර්ග තදබදය පිළිබඳ දැනුම්දීම!</h5>
+          <p>කොළඹ-පුත්තලම ප්‍රධාන මාර්ගයේ, මදුරන්කුලිය මංසන්ධිය අවට මාර්ග තදබදයක් ඇතිවිය හැකිය. විකල්ප මාර්ග භාවිත කරන ලෙස ඉල්ලා සිටිමු.</p>
+          <p>Heavy traffic expected near Madurankuliya junction on Colombo-Puttalam road. Please use alternative routes.</p>
         </div>
-
-        <div class="hero-content">
-            <div class="decoration-top">
-                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' fill='%23d4af37'><path d='M0,10 Q25,0 50,10 T100,10 L100,20 L0,20 Z' opacity='0.7'/><path d='M0,15 Q25,5 50,15 T100,15 L100,20 L0,20 Z'/></svg>" alt="Traditional Border" class="border-motif">
-            </div>
-            
-            <p class="hero-year-badge">76 වන පෙරහැර | 2026</p>
-            
-            <h1 class="hero-main-title">
-                <span class="line-1">මදුරන්කුලිය ශ්‍රී සරණංකරාරාම</span>
-                <span class="line-2">ඓතිහාසික 76 වන අනුබුදු මිහිඳු මහා පෙරහැර</span>
-                <span class="line-en">Madurankuliya Sri Saranankararama 76th Mihindu Perahera</span>
-            </h1>
-
-            <p class="hero-desc">
-                ශාසනික සහ සංස්කෘතික උරුමයන් සුරකිමින්, මිහිඳු මහ රහතන් වහන්සේගේ ලංකාගමනය සිහිපත් කරමින් 76 වන වරටත් පවත්වනු ලබන මදුරන්කුලියේ මහා සංස්කෘතික මංගල්‍යය.
-            </p>
-
-            <div class="hero-actions">
-                <a href="#gallery" class="btn btn-primary"><i class="fas fa-images"></i> ගැලරිය නරඹන්න <span class="btn-sub">View Gallery</span></a>
-                <a href="#route" class="btn btn-secondary"><i class="fas fa-calendar-alt"></i> කාලසටහන <span class="btn-sub">Schedule</span></a>
-            </div>
-
-            <div class="scroll-indicator">
-                <span>පහළට <br> Scroll</span>
-                <i class="fas fa-chevron-down animate-bounce"></i>
-            </div>
-        </div>
-        
-        <!-- Bottom Wave Border -->
-        <div class="hero-bottom-curve">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z" fill="#1a0f10"></path>
-            </svg>
-        </div>
-    </section>
-
-    <!-- Dhamma Quote / Traditional Intro Banner -->
-    <section class="blessing-banner">
-        <div class="container text-center">
-            <h3 class="blessing-text">"සබ්බදානං ධම්මදානං ජිනාති"</h3>
-            <p class="blessing-translation">සියලු දානයන් අතරින් ධර්ම දානය උතුම් වන්නේය.</p>
-            <div class="floral-separator">
-                <span class="dot"></span>
-                <span class="leaf left"></span>
-                <span class="center-flower">✿</span>
-                <span class="leaf right"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text-content">
-                    <div class="section-title-area">
-                        <span class="sub-title">ඓතිහාසික පසුබිම | Historical Significance</span>
-                        <h2 class="section-title">මිහිඳු පෙරහැරේ ශාසනික වටිනාකම</h2>
-                        <div class="title-line"></div>
-                    </div>
-                    
-                    <p class="highlighted-para">
-                        අනුබුදු මිහිඳු මහා රහතන් වහන්සේගේ ලංකාගමනයත් සමඟ මෙරට ඇති වූ ආගමික හා සාමාජීය විප්ලවය අනුස්මරණය කරනු වස් වාර්ෂිකව මදුරන්කුලිය ශ්‍රී සරණංකරාරාම විහාරස්ථානයේ දී මෙම පුණ්‍ය මහෝත්සවය 76 වන වරටත් උත්කර්ෂවත් ලෙස සංවිධානය කෙරේ.
-                    </p>
-
-                    <p>
-                        මදුරන්කුලිය ප්‍රදේශයට දිගු ඉතිහාසයක් හිමි අතර, ශ්‍රී සරණංකරාරාම විහාරස්ථානය ප්‍රදේශයේ බොදු ජනතාවගේ මුදුන් මල්කඩක් බඳු පූජනීය ස්ථානයකි. මෙම ඓතිහාසික පුණ්‍ය මහෝත්සවය, විහාරාධිපති <strong>පූජ්‍ය මහකුඹුක්කඩවල සිරිනන්ද හිමිපාණන් වහන්සේගේ</strong> අනුශාසනාව යටතේ සරණංකර දායක සභාව මඟින් සංවිධානය කරනු ලබයි.
-                    </p>
-
-                        <div class="temple-features">
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-dharmachakra"></i></div>
-                            <div class="feature-desc">
-                                <h4>බෞද්ධ පුනර්ජීවනය</h4>
-                                <p>ප්‍රදේශයේ ධර්ම ප්‍රචාරක කටයුතු හා ආගමික හැදියාව නංවාලීම.</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-drum"></i></div>
-                            <div class="feature-desc">
-                                <h4>හෙළ උරුමය</h4>
-                                <p>උඩරට, පහතරට සහ සබරගමු සාම්ප්‍රදායික නර්තන කලාව සුරැකීම.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-image-card">
-                    <div class="gold-frame">
-                        <img src="23 Madurankuliya viharastaanaya.jpg" alt="Sri Saranankararamaya Temple Viharaya" class="about-img">
-                        <div class="frame-corner top-left"></div>
-                        <div class="frame-corner top-right"></div>
-                        <div class="frame-corner bottom-left"></div>
-                        <div class="frame-corner bottom-right"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pageant Lineup (Cultural Components) -->
-    <section id="pageant" class="pageant-section">
-        <div class="container">
-            <div class="section-title-area text-center">
-                <span class="sub-title">පෙරහැර මංගල්‍යයේ අංග | The Pageant Elements</span>
-                <h2 class="section-title">මහා සංස්කෘතික පෙරහැරේ පෙළගැස්ම</h2>
-                <div class="title-line center"></div>
-            </div>
-
-            <div class="pageant-grid">
-                <!-- Card 1: Hewisi karuvan -->
-                <div class="pageant-card">
-                    <div class="card-image" style="background-image: url('1 Horane karuvan.jpg');">
-                        <div class="card-overlay"></div>
-                        <div class="card-icon"><i class="fas fa-drum"></i></div>
-                    </div>
-                    <div class="card-content" style="text-align: center; padding: 25px 20px 20px;">
-                        <h4 style="font-family: var(--font-heading-si); color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">හේවිසි කරුවන්</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Hewisi Musicians</p>
-                    </div>
-                </div>
-
-                <!-- Card 2: Maha Sangarathnaya -->
-                <div class="pageant-card">
-                    <div class="card-image" style="background-image: url('18 Maha Sangarathnaya saha Nilamevarun.jpg');">
-                        <div class="card-overlay"></div>
-                        <div class="card-icon"><i class="fas fa-hands"></i></div>
-                    </div>
-                    <div class="card-content" style="text-align: center; padding: 25px 20px 20px;">
-                        <h4 style="font-family: var(--font-heading-si); color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">විහාරාධිපති හිමි ඇතුළු මහා සංඝරත්නය</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Maha Sangha & Monks</p>
-                    </div>
-                </div>
-
-                <!-- Card 3: Casket Bearing Elephant -->
-                <div class="pageant-card highlight">
-                    <div class="card-image" style="background-image: url('4 Karaduwa Vadammana Hasthi Rajaya.jpg');">
-                        <div class="card-overlay"></div>
-                        <span class="featured-badge">පෙරහැර</span>
-                        <div class="card-icon"><i class="fas fa-sun"></i></div>
-                    </div>
-                    <div class="card-content" style="text-align: center; padding: 25px 20px 20px;">
-                        <h4 style="font-family: var(--font-heading-si); color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">කරඬුව වැඩමවන හස්ති රාජයා</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Casket Bearing Elephant</p>
-                    </div>
-                </div>
-
-                <!-- Card 4: Traditional Male Dancers -->
-                <div class="pageant-card">
-                    <div class="card-image" style="background-image: url('5 Udarata Ves Narthanaya.jpg');">
-                        <div class="card-overlay"></div>
-                        <div class="card-icon"><i class="fas fa-walking"></i></div>
-                    </div>
-                    <div class="card-content" style="text-align: center; padding: 25px 20px 20px;">
-                        <h4 style="font-family: var(--font-heading-si); color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">උඩරට නර්තන ශිල්පීන්</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Kandyan Dancers</p>
-                    </div>
-                </div>
-
-                <!-- Card 5: Kulu Natuma -->
-                <div class="pageant-card">
-                    <div class="card-image" style="background-image: url('7 Kulu Natuma.jpg');">
-                        <div class="card-overlay"></div>
-                        <div class="card-icon"><i class="fas fa-users"></i></div>
-                    </div>
-                    <div class="card-content" style="text-align: center; padding: 25px 20px 20px;">
-                        <h4 style="font-family: var(--font-heading-si); color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">කුළු නැටුම</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Traditional Kulu Dance</p>
-                    </div>
-                </div>
-
-                <!-- Card 6: Fire Dancers -->
-                <div class="pageant-card">
-                    <div class="card-image" style="background-image: url('9 Giniboolakaruvan.jpg');">
-                        <div class="card-overlay"></div>
-                        <div class="card-icon"><i class="fas fa-fire"></i></div>
-                    </div>
-                    <div class="card-content" style="text-align: center; padding: 25px 20px 20px;">
-                        <h4 style="font-family: var(--font-heading-si); color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">ගිනි බෝල කරුවන්</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Fireball Dancers</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- New Section: Spiritual Reflections & Announcements -->
-    <section id="reflections" class="reflections-section">
-        <div class="container">
-            <div class="section-title-area text-center">
-                <span class="sub-title">පෙරහැර ධර්ම සන්නිවේදනය | Spiritual Messages</span>
-                <h2 class="section-title">මිහිඳු පෙරහැර විභූතියේ ශාසනික පණිවිඩ</h2>
-                <div class="title-line center"></div>
-            </div>
-
-            <div class="reflections-grid">
-                <!-- Reflection 1 -->
-                <div class="reflection-card">
-                    <div class="reflection-card-header">
-                        <div class="reflection-num">1</div>
-                        <h4>පූර්ව ආරාධනාව සහ තෙරුවන් සරණ <span class="en-ref-title">Morning Blessing & Invitation</span></h4>
-                    </div>
-                    <p class="reflection-body-text">පොසොන් පොහෝ දින තෙරුවන් සරණ පතමින්, 76 වන මිහිඳු පෙරහැරේ ශාසනික වැදගත්කම සිහිපත් කිරීම. අකුසලයෙන් වැළකී කුසල් රැස් කිරීම බුදුවදනයි.</p>
-                    <p class="reflection-body-text en">“Sabbapāpassa akaraṇaṁ, kusalassa upasampadā” – Avoid all evil, cultivate the good. Come with faith to witness the noble cultural procession starting at 7 PM.</p>
-                </div>
-
-                <!-- Reflection 2 -->
-                <div class="reflection-card">
-                    <div class="reflection-card-header">
-                        <div class="reflection-num">2</div>
-                        <h4>අනුබුදු මිහිඳු හිමියන්ගේ ලංකාගමනය <span class="en-ref-title">Remembering Arahant Mahinda</span></h4>
-                    </div>
-                    <p class="reflection-body-text">මිහින්තලා පුදබිමේදී දේවානම්පියතිස්ස රජතුමා මුණගැසී ලක්දිව ඉතිහාසය වෙනස් කළ අනුබුදු මිහිඳු මහා රහතන් වහන්සේගේ ඥානාන්විත දේශනය සිහිපත් කිරීම.</p>
-                    <p class="reflection-body-text en">Remembering Arahant Mahinda Thero who brought wisdom and peace. “Appamādo amatapadaṁ” – Heedfulness is the path to the deathless.</p>
-                </div>
-
-                <!-- Reflection 3 -->
-                <div class="reflection-card">
-                    <div class="reflection-card-header">
-                        <div class="reflection-num">3</div>
-                        <h4>පොසොන් පොහෝ දින අර්ථය <span class="en-ref-title">Poson Day Meaning</span></h4>
-                    </div>
-                    <p class="reflection-body-text">ලක්දිවට බුදුදහම උරුම කරදුන් පොසොන් පොහෝ දිනයේ ශාසනික පුනරුදය සැමරීම. ධර්මය රකින්නා ධර්මය විසින්ම රකිනු ලබයි.</p>
-                    <p class="reflection-body-text en">“Dhammo have rakkhati dhammacāriṁ” – The Dhamma protects those who live by it. Poson marks our cultural heartbeat and spiritual awakening.</p>
-                </div>
-
-                <!-- Reflection 4 -->
-                <div class="reflection-card">
-                    <div class="reflection-card-header">
-                        <div class="reflection-num">4</div>
-                        <h4>විහාරස්ථ ශාසනික උරුමය <span class="en-ref-title">Temple Heritage</span></h4>
-                    </div>
-                    <p class="reflection-body-text">ශ්‍රී සරණංකරාරාම විහාරස්ථානය දශක ගණනාවක් පුරා බොදු ජනතාවගේ ශාසනික පහන් ටැඹක් ලෙස කටයුතු කරමින් හෙළ උරුමය සුරැකීමට දරන උත්සාහය.</p>
-                    <p class="reflection-body-text en">Sri Saranankararamaya stands as a beacon of devotion. “Saṅghassa dānaṁ mahapphalaṁ” – Giving to the Sangha brings great merit.</p>
-                </div>
-
-                <!-- Reflection 5 -->
-                <div class="reflection-card">
-                    <div class="reflection-card-header">
-                        <div class="reflection-num">5</div>
-                        <h4>සාමාජීය සාමය සහ සමඟිය <span class="en-ref-title">Community Spirit</span></h4>
-                    </div>
-                    <p class="reflection-body-text">සමඟිය උතුම්ම ආශිර්වාදයයි. මදුරන්කුලිය බොදු ජනතාව වසර 76ක් පුරා මෙම උදාර පෙරහැර පවත්වමින් සාමාජීය සමඟිය තහවුරු කරයි.</p>
-                    <p class="reflection-body-text en">Teachings of the Buddha encourage harmony: “Concord is the highest blessing.” Upholding 76 years of proud village tradition.</p>
-                </div>
-
-                <!-- Reflection 6 -->
-                <div class="reflection-card">
-                    <div class="reflection-card-header">
-                        <div class="reflection-num">6</div>
-                        <h4>පෙරහැර සංස්කෘතික විචිත්‍රත්වය <span class="en-ref-title">About the Perahera Events</span></h4>
-                    </div>
-                    <p class="reflection-body-text">ගිනි බෝල, සැරසූ පාපැදි, උඩරට පහතරට නර්තනයන්ගෙන් විචිත්‍රවත් වන පෙරහැර මංගල්‍යය. සන්සුන් කළ මනස සැපත උදා කරයි.</p>
-                    <p class="reflection-body-text en">“Cittaṁ dantaṁ sukhāvahaṁ” – A well-trained mind brings happiness. Dazzling fireball displays, school bicycles, and dancers adorn the streets.</p>
-                </div>
-
-                <!-- Reflection 7 -->
-                <div class="reflection-card">
-                    <div class="reflection-card-header">
-                        <div class="reflection-num">7</div>
-                        <h4>ළමා පරපුර බොදු මඟට යොමු කිරීම <span class="en-ref-title">Poson Blessings for Children</span></h4>
-                    </div>
-                    <p class="reflection-body-text">පාසල් දරුවන් සැරසූ පාපැදි මඟින් පෙරහැර අලංකාර කරමින් හෙළ සංස්කෘතික දායාදය ඊළඟ පරපුරට උරුම කරදීම.</p>
-                    <p class="reflection-body-text en">“Sīlaṁ rakkhati sobhanaṁ” – Virtue protects the beautiful. Local school children participate with decorated bicycles, bridging generations.</p>
-                </div>
-
-                <!-- Reflection 8 -->
-                <div class="reflection-card">
-                    <div class="reflection-card-header">
-                        <div class="reflection-num">8</div>
-                        <h4>ධර්මාශෝක රජුගේ ධර්ම දූත සේවය <span class="en-ref-title">Emperor Dharmashoka & Peace</span></h4>
-                    </div>
-                    <p class="reflection-body-text">යුධ ජයග්‍රහණයෙන් පසු ධර්ම විජය ඔස්සේ ලොවට සාමය බෙදාහැර අනුබුදු මිහිඳු හිමියන් මෙරටට එවූ ධර්මාශෝක අධිරාජයාගේ දූත මෙහෙවර සිහිපත් කිරීම.</p>
-                    <p class="reflection-body-text en">“Na hi verena verāni” – Hatred is never appeased by hatred. The Perahera is a pilgrimage from noise to stillness, celebrating the gift of Dhamma.</p>
-                </div>
-
-                <!-- Reflection 9 -->
-                <div class="reflection-card">
-                    <div class="reflection-card-header">
-                        <div class="reflection-num">9</div>
-                        <h4>එදිනෙදා ජීවිතයට බුදු දහම <span class="en-ref-title">Dharma for Daily Life</span></h4>
-                    </div>
-                    <p class="reflection-body-text">මිහිඳු පෙරහැර නැරඹීමෙන් පමණක් නොව, බුදුදහමේ ඉගැන්වීම් එදිනෙදා ජීවිතයට ගලපාගෙන ධාර්මිකව ජීවත්වීම උතුම් වේ.</p>
-                    <p class="reflection-body-text en">“Matta-sukhapariccāgā, passe ce vipulaṁ sukhaṁ” – If by giving up a small pleasure one sees greater joy, one should let go and live righteously.</p>
-                </div>
-
-                <!-- Reflection 10 -->
-                <div class="reflection-card">
-                    <div class="reflection-card-header">
-                        <div class="reflection-num">10</div>
-                        <h4>බැතිමතුන්ට අවසන් මතක් කිරීම <span class="en-ref-title">Final Call to Devotees</span></h4>
-                    </div>
-                    <p class="reflection-body-text">තෙරුවන් සරණ යමින්, මෙත් සිතින් හා බුද්ධ භක්තියෙන් යුතුව පෙරහැර වීදි සංචාරය කරන මංගල පෙරහැර සාධුකාර මධ්‍යයේ පිළිගැනීම.</p>
-                    <p class="reflection-body-text en">“Buddhaṁ saraṇaṁ gacchāmi” – Let us take refuge in the Buddha. Stand along roadsides with flowers and metta in your hearts to welcome the Perahera.</p>
-                </div>
-            </div>
-
-            <!-- Devotees Public Requests Box -->
-            <div class="requests-banner">
-                <h3>මහජනතාවගෙන් කාරුණික ඉල්ලීම්</h3>
-                <span class="en-title">Respectful Requests to the Public</span>
-                
-                <div class="requests-list">
-                    <div class="request-item">
-                        <div class="request-badge">1</div>
-                        <div class="request-text">
-                            <h5>මාර්ග සහ පදික වේදිකා නිදහස්ව තැබීම</h5>
-                            <p>ඓතිහාසික පෙරහැර මංගල්‍යය සුමටව ගමන් කිරීම සඳහා මාර්ග සහ පදික වේදිකා නිදහස්ව තබන්න.</p>
-                            <p class="en">Kindly make space along the roads and pavements to allow the procession to pass smoothly and peacefully.</p>
-                        </div>
-                    </div>
-
-                    <div class="request-item">
-                        <div class="request-badge">2</div>
-                        <div class="request-text">
-                            <h5>නර්තන ශිල්පීන්ට ඉඩ සැලසීම</h5>
-                            <p>අවුරුදු 76ක ඓතිහාසික පෙරහැරේ නර්තන ශිල්පීන්ට, කලාකරුවන්ට සහ අලි ඇතුන්ට බාධාවකින් තොරව ගමන් කිරීමට ඉඩ ලබා දෙන්න.</p>
-                            <p class="en">Kindly ask families and children to step aside and make way for dancers, elephants, and performers.</p>
-                        </div>
-                    </div>
-
-                    <div class="request-item">
-                        <div class="request-badge">3</div>
-                        <div class="request-text">
-                            <h5>ගෞරවාන්විතව රැඳී සිටීම</h5>
-                            <p>පෙරහැර සවස 7.00 ට විහාරස්ථාන භූමියෙන් ආරම්භ වන බැවින් කල්වේලා ඇතිව මඟ දෙපස ගෞරවාන්විතව රැඳී සිටින්න.</p>
-                            <p class="en">Please cooperate by giving enough space, keeping the roads clear, and standing respectfully to witness this sacred journey.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Media Gallery & Video Section -->
-    <section id="gallery" class="gallery-section">
-        <div class="container">
-            <div class="section-title-area text-center">
-                <span class="sub-title">ඡායාරූප සහ වීඩියෝ | Media Hub</span>
-                <h2 class="section-title">ඓතිහාසික පෙරහැර මතකයන්</h2>
-                <div class="title-line center"></div>
-            </div>
-
-            <!-- Gallery Filter Tabs -->
-            <div class="gallery-filters">
-                <button class="filter-btn active" data-filter="all">සියල්ල <span class="en-tab">All Media</span></button>
-                <button class="filter-btn" data-filter="featured">විශේෂිත <span class="en-tab">Featured</span></button>
-                <button class="filter-btn" data-filter="dancers">නර්තන <span class="en-tab">Dancers</span></button>
-                <button class="filter-btn" data-filter="elephants">අලි ඇතුන් <span class="en-tab">Elephants</span></button>
-                <button class="filter-btn" data-filter="video">වීඩියෝ <span class="en-tab">Videos</span></button>
-            </div>
-
-            <!-- Video Highlight Frame -->
-            <div class="video-container-wrap">
-                <h3 class="video-section-title"><i class="fas fa-video"></i> පෙරහැර වීඩියෝ දර්ශන | Perahera Video Highlights</h3>
-                <div class="video-box-gold">
-                    <video id="perahera-video" controls poster="4 Karaduwa Vadammana Hasthi Rajaya.jpg" class="main-video">
-                        <source src="3 2026 Perahera Vistaraya.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-custom-overlay" id="video-overlay">
-                        <div class="play-btn-circle">
-                            <i class="fas fa-play"></i>
-                        </div>
-                        <p>මිහිඳු පෙරහැර සජීවී දර්ශන නැරඹීමට ක්ලික් කරන්න</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Image Grid -->
-            <div class="gallery-grid" id="gallery-grid">
-                <!-- Temple Viharaya Images -->
-                <div class="gallery-item featured" data-src="20 Viharasthanaye Budupilima vahanse.jpg" data-caption="මදුරන්කුලිය ශ්‍රී සරණංකරාරාම විහාරස්ථානයේ වැඩසිටින බුද්ධ ප්‍රතිමා වහන්සේ">
-                    <img src="20 Viharasthanaye Budupilima vahanse.jpg" alt="Seated Buddha Statue" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">බුද්ධ ප්‍රතිමා වහන්සේ</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item featured" data-src="23 Madurankuliya viharastaanaya.jpg" data-caption="ඓතිහාසික මදුරන්කුලිය ශ්‍රී සරණංකරාරාම විහාර භූමිය">
-                    <img src="23 Madurankuliya viharastaanaya.jpg" alt="Temple Banner" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">විහාරස්ථ පරිශ්‍රය</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item featured" data-src="19 Vihaarastaanaye Chaithya Rajayaa.jpg" data-caption="විහාරස්ථ සෑ රජුන් වහන්සේ පවිත්‍රතා කටයුතුවල නිරත වන දායක පිරිස">
-                    <img src="19 Vihaarastaanaye Chaithya Rajayaa.jpg" alt="Temple Stupa cleaning" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">විහාරස්ථ වෙහෙර වහන්සේ</p>
-                    </div>
-                </div>
-
-                <!-- New Elephant Image from 2026 Invitation -->
-                <div class="gallery-item featured elephants" data-src="4 Karaduwa Vadammana Hasthi Rajaya.jpg" data-caption="2026 ඓතිහාසික 76 වන මිහිඳු මහා පෙරහැරේ මංගල හස්ති රාජයා">
-                    <img src="4 Karaduwa Vadammana Hasthi Rajaya.jpg" alt="New Decorated Elephant" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">මංගල හස්ති රාජයා (2026)</p>
-                    </div>
-                </div>
-
-                <!-- User Uploaded Main Image 1 (Drummers) -->
-                <div class="gallery-item featured dancers" data-src="1 Horane karuvan.jpg" data-caption="ශ්‍රී සරණංකර විහාරස්ථානයේ අනුබුදු මිහිඳු පෙරහැරේ හේවිසි වාදන ශිල්පීන් - 2024">
-                    <img src="1 Horane karuvan.jpg" alt="Traditional Musicians" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">හේවිසි වාදකයින්</p>
-                    </div>
-                </div>
-
-                <!-- User Uploaded Main Image 3 (Male Dancers) -->
-                <div class="gallery-item dancers" data-src="11 Ves Narthanaya.jpg" data-caption="පෙරහැරේ සාම්ප්‍රදායික වෙස් නර්තන ශිල්පියෙකු">
-                    <img src="11 Ves Narthanaya.jpg" alt="Traditional Male Dancer" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">වෙස් නර්තන ශිල්පියා</p>
-                    </div>
-                </div>
-
-                <!-- User Uploaded Main Image 4 (Female Dancers) -->
-                <div class="gallery-item dancers" data-src="5 Udarata Ves Narthanaya.jpg" data-caption="ලාලිත්‍යවත් වන්දනා නර්තනයක යෙදෙන ගැහැණු ළමුන් කණ්ඩායම">
-                    <img src="5 Udarata Ves Narthanaya.jpg" alt="Traditional Female Dancers" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">කාන්තා වන්දනා නර්තනය</p>
-                    </div>
-                </div>
-
-                <!-- Remaining images in folder -->
-                <div class="gallery-item dancers" data-src="13 Ves Narthanaya.jpg" data-caption="උණ බට පටි ආශ්‍රිතව නම්‍යශීලී නර්තන රටා ඉදිරිපත් කරන කණ්ඩායමක්">
-                    <img src="13 Ves Narthanaya.jpg" alt="Traditional Dance" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">ලී කෙළි නර්තන රටා</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item dancers" data-src="6 Payimpath Narthanaya.jpg" data-caption="උඩරට සාම්ප්‍රදායික නර්තන කණ්ඩායමක්">
-                    <img src="6 Payimpath Narthanaya.jpg" alt="Male Dancers Performance" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">උඩරට නර්තන කණ්ඩායම</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item dancers" data-src="7 Kulu Natuma.jpg" data-caption="පහතරට නර්තන කලාවේ විචිත්‍රවත් අවස්ථාවක්">
-                    <img src="7 Kulu Natuma.jpg" alt="Traditional Mask/Folk Dancer" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">පහතරට නර්තන අංග</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item dancers" data-src="8 Monara Natuma.jpg" data-caption="විචිත්‍රවත් මයුර නර්තන අංගයක් (Peacock Dance)">
-                    <img src="8 Monara Natuma.jpg" alt="Peacock Dance" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">මයුර නර්තනය</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item featured" data-src="9 Giniboolakaruvan.jpg" data-caption="සන්ධ්‍යා භාගයේ පෙරහැර වීදි සංචාරය ආරම්භ වන අවස්ථාව">
-                    <img src="9 Giniboolakaruvan.jpg" alt="Perahera starting scene" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">පෙරහැර ආරම්භය</p>
-                    </div>
-                </div>
-
-                <!-- Additional dynamic images from directory -->
-                <div class="gallery-item" data-src="10 Giniboolakaruvan.jpg" data-caption="ගිනි බෝල කරුවන් (Fireball Performers)">
-                    <img src="10 Giniboolakaruvan.jpg" alt="Fireball Performers" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">ගිනි බෝල කරුවන්</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item dancers" data-src="14 Ves Narthanaya.jpg" data-caption="සාම්ප්‍රදායික වෙස් නර්තන කණ්ඩායමක්">
-                    <img src="14 Ves Narthanaya.jpg" alt="Ves Dancers" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">වෙස් නර්තන කණ්ඩායම</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item featured" data-src="18 Maha Sangarathnaya saha Nilamevarun.jpg" data-caption="මහා සංඝරත්නය සහ නිලමේවරුන් පෙරහැරේ ගමන් කිරීම">
-                    <img src="18 Maha Sangarathnaya saha Nilamevarun.jpg" alt="Maha Sangha & Nilamevarun" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">සංඝරත්නය සහ නිලමේවරුන්</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-src="15 Mal Bicycle karuvan.jpg" data-caption="සැරසූ මල් පාපැදි කණ්ඩායම (Decorated Bicycles)">
-                    <img src="15 Mal Bicycle karuvan.jpg" alt="Decorated Bicycles" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">සැරසූ මල් පාපැදි</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item featured" data-src="16 Karadu Vahanse tanpath kirima.jpg" data-caption="ධාතු කරඬුව තැන්පත් කිරීම (Placing the Casket)">
-                    <img src="16 Karadu Vahanse tanpath kirima.jpg" alt="Placing the Casket" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">ධාතු කරඬුව තැන්පත් කිරීම</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-src="21 Viharasthanaye Boodinvahanse 1.jpg" data-caption="විහාරස්ථ බෝධීන් වහන්සේ">
-                    <img src="21 Viharasthanaye Boodinvahanse 1.jpg" alt="Bodhi Tree" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">විහාරස්ථ බෝධීන් වහන්සේ</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-src="22 Viharasthanaye Boodin vahanse 2.jpg" data-caption="විහාරස්ථ බෝධීන් වහන්සේ (රාත්‍රී දර්ශනය)">
-                    <img src="22 Viharasthanaye Boodin vahanse 2.jpg" alt="Bodhi Tree Night" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">බෝධීන් වහන්සේ (රාත්‍රී)</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item dancers" data-src="17 Kulu Narthanaya.jpg" data-caption="කුළු නර්තන කණ්ඩායම (Traditional Kulu Dancers)">
-                    <img src="17 Kulu Narthanaya.jpg" alt="Traditional Kulu Dancers" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">කුළු නර්තන කණ්ඩායම</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item dancers" data-src="2 Pantheru Natuma.jpg" data-caption="පැන්තරු නර්තන කණ්ඩායම (Pantheru Dancers)">
-                    <img src="2 Pantheru Natuma.jpg" alt="Pantheru Dancers" loading="lazy">
-                    <div class="gallery-item-hover">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                        <p class="img-desc">පැන්තරු නර්තන කණ්ඩායම</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Custom Lightbox -->
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close" id="lightbox-close">&times;</span>
-        <span class="lightbox-arrow lightbox-prev" id="lightbox-prev">&#10094;</span>
-        <span class="lightbox-arrow lightbox-next" id="lightbox-next">&#10095;</span>
-        <div class="lightbox-content-box">
-            <img id="lightbox-img" src="" alt="Lightbox Zoomed Image">
-            <div class="lightbox-caption" id="lightbox-caption">Caption text goes here</div>
-        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Perahera Timeline / Schedule Section -->
-    <section id="route" class="schedule-section">
-        <div class="container">
-            <!-- Official Invitation Banner -->
-            <div class="invitation-text-box" style="max-width: 900px; margin: 0 auto 40px; padding: 30px; background: linear-gradient(135deg, rgba(9c, 6, 18, 0.08) 0%, rgba(26, 15, 16, 0.03) 100%); border: 2px solid var(--accent-color); border-radius: 8px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-                <span class="sub-title" style="color: var(--accent-color); font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 10px;">බැතිබර ආරාධනය | Official Invitation</span>
-                <h3 style="color: var(--primary-color); font-family: var(--font-heading-si); font-size: 1.8rem; margin-bottom: 20px;">76 වන මිහිඳු මහා පෙරහැර මංගල්‍යය</h3>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-dark); font-weight: 500; margin-bottom: 15px;">
-                    පුත්තලම මදුරන්කුලිය ශ්‍රී සරණංකරාරාම විහාරස්ථානය විසින් 76 වන වරටත් සංවිධානය කරනු ලබන, අනුබුදු මිහිඳු මහා පෙරහැර.
-                </p>
-                <p style="font-size: 1rem; line-height: 1.7; color: var(--text-dark); margin-bottom: 15px;">
-                    උඩරට, පහතරට, සබරගමුව සහ නව නිර්මාණ නර්තනාංග රැසක්, අලි ඇතුන්ගෙන් ආඪ්‍ය වෙමින්ද, පෙරහැර නැරඹීමට ආසන්නව 1200ක්, ෆේස්බුක් සජීවීකරණයක්, විදුලි ආලෝකකරණය ඇතුළු විවිධවත් ආලෝකකරණයන්, මෙවැනි අංග රැසකින් සමන්විත, අති උත්කර්ෂවත් පෙරහැරක් මෙවරත් වීදි සංචාරය කෙරෙන වගයි.
-                </p>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--primary-color); font-weight: 600; margin-bottom: 0;">
-                    පෙර නොවූ විරූ ලෙස අප ප්‍රදේශයේ එළිදැක්වෙන, මේ අපූර්ව සංස්කෘතිකමය මංගල්‍යය නැරඹීමට ඔබ සැමට බැති සිතින් ආරාධනා!
-                </p>
-            </div>
+  <!-- SUPPORT BANNER -->
+  <section class="support-banner">
+    <div class="container text-center">
+      <h3>මෙම උදාර ශාසනික මංගල්‍යයට දායක වන්න</h3>
+      <p>හෙළ සංස්කෘතික උරුමය මතු පරපුරට දායාද කිරීම පිණිස, ඔබගේ දායකත්වය සඳහා <strong>දායක සභාවේ නිලධාරීන්</strong> සම්බන්ධ කරගන්නා මෙන් ඉල්ලා සිටිමු.</p>
+      <a href="#contact" class="btn btn-primary"><i class="fas fa-hands-helping"></i> දායක සභාව සම්බන්ධ කරගන්න <span class="btn-sub">Contact Dayaka Sabha</span></a>
+    </div>
+  </section>
 
-            <div class="section-title-area text-center">
-                <span class="sub-title">පෙරහැර ගමන් මඟ සහ කාලසටහන | Schedule & Route</span>
-                <h2 class="section-title">ඓතිහාසික 76 වන මිහිඳු මහා පෙරහැර උත්සව මාලාවේ කාලසටහන</h2>
-                <div class="title-line center"></div>
-            </div>
-
-            <div class="schedule-timeline">
-                <!-- Timeline Item 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-badge">1</div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <span class="date-badge"><i class="far fa-calendar-alt"></i> 2026 ජූනි මස 27 වන දින (June 27, 2026)</span>
-                            <h4>රාත්‍රී සර්කස් සංදර්ශන මාලාව</h4>
-                            <span class="en-timeline-title">Grand Night Circus Show Series</span>
-                        </div>
-                        <div class="timeline-body">
-                            <p>2026 ජූනි මස 27 වන දින, රාත්‍රී සර්කස් සංදර්ශන මාලාව...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-badge">2</div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <span class="date-badge"><i class="far fa-calendar-alt"></i> 2026 ජූනි මස 28 වන දින (June 28, 2026)</span>
-                            <h4>සර්කස්, නාට්‍ය, භාණ්ඩ සල්පිල් සහ ගී ප්‍රසංගය</h4>
-                            <span class="en-timeline-title">Circus, Drama, Auction & Musical Concert</span>
-                        </div>
-                        <div class="timeline-body">
-                            <p>2026 ජූනි මස 28 වන දින, සර්කස් සංදර්ශන සමඟින් වයඹ දේවිමිණි කලා සංගමය මඟින් ඉදිරිපත් කරන, නාට්‍ය සහ භාණ්ඩ සල්පිල් වෙන්දේසිය සමඟින් ආධුනික ගී ප්‍රසංගයද පැවැත්වේ.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 3 - Highlight (Perahera Day) -->
-                <div class="timeline-item highlight">
-                    <div class="timeline-badge"><i class="fas fa-star"></i></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <span class="date-badge gold"><i class="far fa-calendar-alt"></i> 2026 ජූනි මස 29 වන දින (June 29, 2026)</span>
-                            <h4>ඓතිහාසික 76 වන අනුබුදු මිහිඳු මහා වීදි පෙරහැර</h4>
-                            <span class="en-timeline-title">Grand 76th Mihindu Maha Perahera Street Parade</span>
-                        </div>
-                        <div class="timeline-body">
-                            <p>පුත්තලම මදුරන්කුලිය ශ්‍රී සරණංකරාරාම විහාරස්ථානය විසින් 76 වන වරටත් සංවිධානය කරනු ලබන, අනුබුදු මිහිඳු මහා පෙරහැර.</p>
-                            <p>උඩරට, පහතරට, සබරගමුව සහ නව නිර්මාණ නර්තනාංග රැසක්, අලි ඇතුන්ගෙන් ආඪ්‍ය වෙමින්ද, පෙරහැර නැරඹීමට ආසන්නව 1200ක්, ෆේස්බුක් සජීවීකරණයක්, විදුලි ආලෝකකරණය ඇතුළු විවිධවත් ආලෝකකරණයන්, මෙවැනි අංග රැසකින් සමන්විත, අති උත්කර්ෂවත් පෙරහැරක් මෙවරත් වීදි සංචාරය කෙරෙන වගයි.</p>
-                            <p>පෙර නොවූ විරූ ලෙස අප ප්‍රදේශයේ එළිදැක්වෙන, මේ අපූර්ව සංස්කෘතිකමය මංගල්‍යය නැරඹීමට ඔබ සැමට බැති සිතින් ආරාධනා!</p>
-                            
-                            <div class="detailed-schedule-box" style="margin-top: 15px; padding: 15px; background-color: rgba(9c, 6, 18, 0.05); border-left: 3px solid var(--accent-color); border-radius: 4px; text-align: left;">
-                                <h5 style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 10px; font-family: var(--font-heading-si);"><i class="fas fa-list-ol"></i> පෙරහැර දින වැඩසටහන් පෙළගැස්ම:</h5>
-                                <ul style="list-style: none; padding-left: 0; font-size: 0.85rem; line-height: 1.6;">
-                                    <li><strong>ප.ව. 5.30</strong> - පෙරහැර පෙළ ගැස්ම ඇරඹීම (Lineup begins)</li>
-                                    <li><strong>ප.ව. 5.55</strong> - සධාතුක කරඬුව මංගල හස්තියා මත තැබීම (පිරිත් පැන් ඉසීම)</li>
-                                    <li><strong>ප.ව. 6.00</strong> - මිහිඳු හිමි අනුරුවට මල් පූජාව සහ අසුන් ගැන්වීම (Flower offering & seating)</li>
-                                    <li><strong>ප.ව. 6.10</strong> - පිළිගැනීමේ කථාව - දායක සභාවේ සභාපති චන්න රත්නායක මහතා</li>
-                                    <li><strong>ප.ව. 6.15</strong> - පංචශීලය හා අනුශාසනාව - විහාරාධිපති පූජ්‍ය මහකුඹුක්කඩවල සිරිනන්ද හිමිපාණන් වහන්සේ</li>
-                                    <li><strong>ප.ව. 6.25</strong> - ආරාධිත කථාව - අමාත්‍ය මහාචාර්ය චන්දන අබේරත්න මැතිතුමා</li>
-                                    <li><strong>ප.ව. 7.00</strong> - ඓතිහාසික වීදි පෙරහැර සංචාරය ආරම්භ කිරීම (Commences at 7:00 PM)</li>
-                                </ul>
-                            </div>
-
-                            <div class="route-details" style="margin-top: 15px; text-align: left;">
-                                <strong><i class="fas fa-map-marker-alt"></i> පෙරහැර ගමන් මඟ:</strong> විහාරස්ථාන භූමියෙන් ආරම්භ වී මදුරන්කුලිය නගර මධ්‍යයේ විශේෂ පීඨිකාව හරහා ප්‍රධාන මාර්ගය ඔස්සේ ගමන් කර නැවත විහාරස්ථානයට ගෙවැදීම (අලුයම් කාලයේ දී).
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Traffic Congestion & Route Warning Box -->
-            <div class="traffic-warning-box" style="max-width: 900px; margin: 40px auto 0; padding: 20px; background-color: rgba(212, 175, 55, 0.1); border: 2px solid var(--accent-color); border-radius: 6px; display: flex; align-items: center; gap: 20px; text-align: left;">
-                <div class="warning-icon" style="font-size: 2.2rem; color: var(--primary-color);"><i class="fas fa-exclamation-triangle"></i></div>
-                <div class="warning-text">
-                    <h5 style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 5px; font-family: var(--font-heading-si);">විශේෂ මාර්ග තදබදය පිළිබඳ දැනුම්දීම! | Special Traffic Notice</h5>
-                    <p style="font-size: 0.85rem; color: var(--text-dark); margin-bottom: 0;">එදින කොළඹ පුත්තලම ප්‍රධාන මාර්ගයේ, මදුරන්කුලිය මංසන්ධිය අවට මාර්ග තදබදයක් ඇතිවිය හැකි බැවින්, විකල්ප මාර්ග භාවිත කරන මෙන් නැවතත් ඔබට මතක් කර සිටිමු.</p>
-                    <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; margin-bottom: 0; border-top: 1px dashed rgba(0,0,0,0.1); padding-top: 3px;">Due to the procession, heavy traffic congestion is expected near the Madurankuliya junction on the Colombo-Puttalam main road. Please use alternative routes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-        </div>
-    </section>
-        </div>
-    </section>
-
-    <!-- Donation & Support Invitation Banner -->
-    <section class="support-banner">
-        <div class="container text-center">
-            <h3>මෙම උදාර ශාසනික මංගල්‍යයට දායක වන්න</h3>
-            <p>සම්බුදු ශාසනයේ උන්නතිය උදෙසා සහ හෙළ සංස්කෘතික උරුමය මතු පරපුරට දායාද කිරීම පිණිස පවත්වනු ලබන මෙම පෙරහැර සඳහා ඔබගේ දායකත්වය සහ ආධාර උපකාර සඳහා <strong>දායක සභාවේ නිලධාරීන් (Dayaka Sabha Officials)</strong> සම්බන්ධ කරගන්නා මෙන් කාරුණිකව ඉල්ලා සිටිමු.</p>
-            <a href="#contact" class="btn btn-primary"><i class="fas fa-hands-helping"></i> දායක සභාවේ නිලධාරීන් සම්බන්ධ කරගන්න <span class="btn-sub">Contact Dayaka Sabha</span></a>
-        </div>
-    </section>
-
-    <!-- Temple Info & Contact Form Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="contact-grid">
-                <!-- Temple Info -->
-                <div class="contact-info">
-                    <div class="section-title-area">
-                        <span class="sub-title">විමසීම් සහ සබඳතා | Contact Us</span>
-                        <h2 class="section-title">විහාරස්ථාන තොරතුරු</h2>
-                        <div class="title-line"></div>
-                    </div>
-                    
-                    <p>පෙරහැර පිළිබඳ වැඩිදුර විස්තර සහ දායකත්වයන් ලබාදීම සඳහා පහත ලිපිනයෙන් හෝ දුරකථන අංක මඟින් විහාරස්ථ සංවිධායක කමිටුව සම්බන්ධ කරගත හැක.</p>
-
-                    <ul class="contact-details-list">
-                        <li>
-                            <div class="icon-wrap"><i class="fas fa-map-marked-alt"></i></div>
-                            <div class="details-wrap">
-                                <strong>ලිපිනය (Address):</strong>
-                                <p>შ්‍රී සරණංකරාරමය, මදුරන්කුලිය, ශ්‍රී ලංකාව <br> Sri Saranankararamaya, Madurankuliya, Sri Lanka.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon-wrap"><i class="fas fa-dharmachakra"></i></div>
-                            <div class="details-wrap">
-                                <strong>විහාරාධිපති (Viharadhipathi Thero):</strong>
-                                <p>පූජ්‍ය මහකුඹුක්කඩවල සිරිනන්ද හිමිපාණන් වහන්සේ <br> Ven. Mahakumbukkadawala Sirinanda Thero</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon-wrap"><i class="fas fa-phone-alt"></i></div>
-                            <div class="details-wrap">
-                                <strong>සබඳතා (Contacts):</strong>
-                                <p>සභාපති (Chairman) - චන්න රත්නායක (Channa Ratnayake): +94 77 600 7430 <br> ලේකම් (Secretary) - සුරංජ (Suranja): +94 76 080 0973</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon-wrap"><i class="fas fa-envelope"></i></div>
-                            <div class="details-wrap">
-                                <strong>විද්‍යුත් තැපෑල (Email):</strong>
-                                <p>madurankuliyatemple@gmail.com</p>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <!-- Visual stylized map container -->
-                    <div class="visual-map-card">
-                        <h4><i class="fas fa-compass"></i> විහාරස්ථානයට ළඟාවීමට (Location Guide)</h4>
-                        <p>මදුරන්කුලිය හන්දියේ සිට කොළඹ-පුත්තලම ප්‍රධාන මාර්ගය ඔස්සේ මීටර් 500ක් පමණ දුරින් විහාරස්ථානය පිහිටා ඇත. (නගර මධ්‍යයේ පෙරහැර නැරඹීම සඳහා විශේෂ පීඨිකාවක් සූදානම් කර ඇත.)</p>
-                        <div class="location-mock-btn">
-                            <a href="https://maps.app.goo.gl/6Bpkmg2RAmykuRRi7?g_st=ac" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-signs"></i> Google Maps ඔස්සේ මාර්ගය බලන්න</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact/Donation Form -->
-                <div class="contact-form-area">
-                    <div class="form-box">
-                        <h3>දායක සභාවේ නිලධාරීන් සම්බන්ධ කරගැනීම</h3>
-                        <p class="form-subtext">පෙරහැර සඳහා දායකත්වයන් ලබාදීම හෝ විමසීම් සඳහා පහත පෝරමය මඟින් දායක සභාවේ නිලධාරීන් සම්බන්ධ කරගන්න.</p>
-                        
-                        <form id="perahera-contact-form">
-                            <div class="form-group">
-                                <label for="name"><i class="fas fa-user"></i> ඔබගේ නම (Your Name) <span class="required">*</span></label>
-                                <input type="text" id="name" name="name" required placeholder="නම ඇතුළත් කරන්න">
-                            </div>
-
-                            <div class="form-group-row">
-                                <div class="form-group">
-                                    <label for="phone"><i class="fas fa-phone"></i> දුරකථන අංකය (Phone) <span class="required">*</span></label>
-                                    <input type="tel" id="phone" name="phone" required placeholder="07X XXXXXXX">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email"><i class="fas fa-envelope"></i> විද්‍යුත් තැපෑල (Email)</label>
-                                    <input type="email" id="email" name="email" placeholder="example@mail.com">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message-type"><i class="fas fa-hands"></i> විමසීමේ ස්වභාවය (Type of Inquiry)</label>
-                                <select id="message-type" name="message-type">
-                                    <option value="donation">පෙරහැර දායකත්වය (Donations & Sponsors)</option>
-                                    <option value="cultural">සංස්කෘතිකාංග ඉදිරිපත් කිරීම් (Cultural Performances)</option>
-                                    <option value="volunteer">ස්වේච්ඡා සේවා (Volunteering)</option>
-                                    <option value="general">වෙනත් සාමාන්‍ය තොරතුරු (General Inquiry)</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message"><i class="fas fa-comment-alt"></i> පණිවිඩය (Your Message) <span class="required">*</span></label>
-                                <textarea id="message" name="message" rows="5" required placeholder="ඔබගේ පණිවිඩය මෙහි ලියන්න..."></textarea>
-                            </div>
-
-                            <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> පණිවිඩය යොමු කරන්න <span class="btn-sub-text">Submit Message</span></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-top">
-            <div class="container footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <svg viewBox="0 0 50 50" class="lotus-logo-gold">
-                            <path d="M25 5 C22 15, 15 20, 25 45 C35 20, 28 15, 25 5 Z" fill="#d4af37"/>
-                            <path d="M25 15 C15 22, 10 32, 25 45 C40 32, 35 22, 25 15 Z" fill="#ffffff" opacity="0.5"/>
-                        </svg>
-                        <h4>මදුරන්කුලිය ශ්‍රී සරණංකරාරාමය</h4>
-                    </div>
-                    <p>විහාරාධිපති හිමියන් ඇතුළු සරණංකර දායක සභාව, ප්‍රතිසංස්කරණ කමිටුව සහ මිහිඳු පෙරහැර සංවිධායක කමිටුව මඟින් සංවිධානය කරනු ලබයි.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-links">
-                    <h4>සබැඳි (Quick Links)</h4>
-                    <ul>
-                        <li><a href="#hero"><i class="fas fa-chevron-right"></i> මුල් පිටුව (Home)</a></li>
-                        <li><a href="#about"><i class="fas fa-chevron-right"></i> පෙරහැර ඉතිහාසය (History)</a></li>
-                        <li><a href="#pageant"><i class="fas fa-chevron-right"></i> සංස්කෘතිකාංග (Pageant)</a></li>
-                        <li><a href="#gallery"><i class="fas fa-chevron-right"></i> ඡායාරූප (Gallery)</a></li>
-                        <li><a href="#route"><i class="fas fa-chevron-right"></i> ගමන් මඟ (Route)</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-blessing-card">
-                    <h4>තෙරුවන් සරණයි</h4>
-                    <p class="blessing-quote">"ආරෝග්‍යපරමා ලාභා - සන්තුට්ඨිපරමං ධනං <br> විශ්වාසාපරමා ඥාති - නිබ්බාණපරමං සුඛං"</p>
-                    <p class="blessing-trans">නිරෝගිකම උතුම්ම ලාභයයි. සතුට උතුම්ම ධනයයි. විශ්වාසවන්තයා හොඳම නෑයායි. නිවන් දැකීම පරම සැපතයි.</p>
-                </div>
-            </div>
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-title-area">
+            <span class="sub-title">විමසීම් | Contact Us</span>
+            <h2 class="section-title">විහාරස්ථාන තොරතුරු</h2>
+            <div class="title-line"></div>
+          </div>
+          <p>පෙරහැර පිළිබඳ විස්තර සහ දායකත්වයන් ලබාදීම සඳහා:</p>
+          <ul class="contact-details-list">
+            <li><div class="icon-wrap"><i class="fas fa-map-marked-alt"></i></div><div class="details-wrap"><strong>ලිපිනය (Address)</strong><p>ශ්‍රී සරණංකරාරාමය, මදුරන්කුලිය, ශ්‍රී ලංකාව<br>Sri Saranankararamaya, Madurankuliya, Sri Lanka.</p></div></li>
+            <li><div class="icon-wrap"><i class="fas fa-dharmachakra"></i></div><div class="details-wrap"><strong>විහාරාධිපති</strong><p>පූජ්‍ය මහකුඹුක්කඩවල සිරිනන්ද හිමිපාණන් වහන්සේ<br>Ven. Mahakumbukkadawala Sirinanda Thero</p></div></li>
+            <li><div class="icon-wrap"><i class="fas fa-phone-alt"></i></div><div class="details-wrap"><strong>සබඳතා (Contacts)</strong><p>සභාපති — චන්න රත්නායක: +94 77 600 7430<br>ලේකම් — සුරංජ: +94 76 080 0973</p></div></li>
+            <li><div class="icon-wrap"><i class="fas fa-envelope"></i></div><div class="details-wrap"><strong>විද්‍යුත් තැපෑල</strong><p>madurankuliyatemple@gmail.com</p></div></li>
+          </ul>
+          <div class="visual-map-card">
+            <h4><i class="fas fa-compass"></i> විහාරස්ථානයට ළඟාවීමට</h4>
+            <p>මදුරන්කුලිය හන්දියේ සිට කොළඹ-පුත්තලම ප්‍රධාන මාර්ගය ඔස්සේ මීටර් 500ක් දුරින් පිහිටා ඇත.</p>
+            <div class="location-mock-btn"><a href="https://maps.app.goo.gl/6Bpkmg2RAmykuRRi7?g_st=ac" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-signs"></i> Google Maps ඔස්සේ බලන්න</a></div>
+          </div>
         </div>
 
-        <div class="footer-bottom">
-            <div class="container text-center">
-                <p>&copy; 2026 Madurankuliya Sri Saranankararama Viharaya. All Rights Reserved. Designed & Developed under the Traditional Perahera Theme.</p>
-            </div>
+        <div class="contact-form-area">
+          <div class="form-box">
+            <h3>දායක සභාව සම්බන්ධ කරගැනීම</h3>
+            <p class="form-subtext">පෙරහැර සඳහා දායකත්වයන් හෝ විමසීම් සඳහා:</p>
+            <form id="perahera-contact-form" novalidate>
+              <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> ඔබගේ නම <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required placeholder="නම ඇතුළත් කරන්න">
+              </div>
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="phone"><i class="fas fa-phone"></i> දුරකථනය <span class="required">*</span></label>
+                  <input type="tel" id="phone" name="phone" required placeholder="07X XXXXXXX">
+                </div>
+                <div class="form-group">
+                  <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                  <input type="email" id="email" name="email" placeholder="example@mail.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message-type"><i class="fas fa-hands"></i> විමසීමේ ස්වභාවය</label>
+                <select id="message-type" name="message-type">
+                  <option value="donation">පෙරහැර දායකත්වය (Donations)</option>
+                  <option value="cultural">සංස්කෘතිකාංග ඉදිරිපත් කිරීම්</option>
+                  <option value="volunteer">ස්වේච්ඡා සේවා (Volunteering)</option>
+                  <option value="general">සාමාන්‍ය විමසීම් (General)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message"><i class="fas fa-comment-alt"></i> පණිවිඩය <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="5" required placeholder="ඔබගේ පණිවිඩය..."></textarea>
+              </div>
+              <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> පණිවිඩය යොමු කරන්න <span class="btn-sub-text">Submit Message</span></button>
+            </form>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <svg viewBox="0 0 50 50" class="lotus-logo-gold"><path d="M25 5 C22 15, 15 20, 25 45 C35 20, 28 15, 25 5 Z" fill="#d4af37"/><path d="M25 15 C15 22, 10 32, 25 45 C40 32, 35 22, 25 15 Z" fill="#ffffff" opacity="0.4"/></svg>
+              <h4>මදුරන්කුලිය ශ්‍රී සරණංකරාරාමය</h4>
+            </div>
+            <p>සරණංකර දායක සභාව, ප්‍රතිසංස්කරණ කමිටුව සහ මිහිඳු පෙරහැර සංවිධායක කමිටුව මඟින් සංවිධානය කරනු ලබයි.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4>සබැඳි</h4>
+            <ul>
+              <li><a href="#hero"><i class="fas fa-chevron-right"></i> මුල් පිටුව</a></li>
+              <li><a href="#about"><i class="fas fa-chevron-right"></i> ඉතිහාසය</a></li>
+              <li><a href="#pageant"><i class="fas fa-chevron-right"></i> සංස්කෘතිකාංග</a></li>
+              <li><a href="#gallery"><i class="fas fa-chevron-right"></i> ගැලරිය</a></li>
+              <li><a href="#route"><i class="fas fa-chevron-right"></i> කාලසටහන</a></li>
+            </ul>
+          </div>
+          <div class="footer-blessing-card">
+            <h4>තෙරුවන් සරණයි</h4>
+            <p class="blessing-quote">"ආරෝග්‍යපරමා ලාභා — සන්තුට්ඨිපරමං ධනං<br>විශ්වාසාපරමා ඥාති — නිබ්බාණපරමං සුඛං"</p>
+            <p class="blessing-trans">නිරෝගිකම උතුම්ම ලාභයයි. සතුට උතුම්ම ධනයයි. නිවන් දැකීම පරම සැපතයි.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Madurankuliya Sri Saranankararama Viharaya. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+  // PRELOADER
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const p = document.getElementById('preloader');
+      if (p) { p.classList.add('hide'); setTimeout(() => p.remove(), 800); }
+    }, 2800);
+  });
+
+  // MOBILE NAV
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const navMenu = document.getElementById('nav-menu');
+  if (menuBtn && navMenu) {
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('open');
+      navMenu.classList.toggle('open');
+    });
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuBtn.classList.remove('open');
+        navMenu.classList.remove('open');
+      });
+    });
+  }
+
+  // HEADER SCROLL EFFECT
+  const header = document.querySelector('.main-header');
+  window.addEventListener('scroll', () => {
+    header.style.background = window.scrollY > 60
+      ? 'rgba(5,2,3,0.98)'
+      : 'rgba(13,6,8,0.95)';
+    updateActiveNav();
+  }, { passive: true });
+
+  function updateActiveNav() {
+    const sections = document.querySelectorAll('section[id]');
+    const links = document.querySelectorAll('.nav-menu a');
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 90) current = s.id; });
+    links.forEach(l => {
+      l.classList.remove('active');
+      if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+    });
+  }
+
+  // HERO SLIDER
+  const slides = document.querySelectorAll('.slide');
+  let sIdx = 0;
+  if (slides.length > 1) {
+    setInterval(() => {
+      slides[sIdx].classList.remove('active');
+      sIdx = (sIdx + 1) % slides.length;
+      slides[sIdx].classList.add('active');
+    }, 5000);
+  }
+
+  // SMOOTH SCROLL
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id === '#') return;
+      const target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // GALLERY FILTER
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        if (f === 'all') { item.style.display = ''; }
+        else if (f === 'video') { item.style.display = 'none'; }
+        else { item.style.display = item.classList.contains(f) ? '' : 'none'; }
+      });
+    });
+  });
+
+  // LIGHTBOX
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  const lbCap = document.getElementById('lightbox-caption');
+  let imgs = [], iIdx = 0;
+
+  function buildImgs() {
+    imgs = [...document.querySelectorAll('.gallery-item[data-src]:not([style*="display: none"])')].map(el => ({ src: el.dataset.src, cap: el.dataset.caption || '' }));
+  }
+
+  document.querySelectorAll('.gallery-item').forEach(el => {
+    el.addEventListener('click', () => {
+      if (!el.dataset.src) return;
+      buildImgs();
+      iIdx = imgs.findIndex(i => i.src === el.dataset.src);
+      if (iIdx < 0) iIdx = 0;
+      showLB(iIdx);
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function showLB(i) { if (imgs[i]) { lbImg.src = imgs[i].src; lbCap.textContent = imgs[i].cap; } }
+  function closeLB() { lb.classList.remove('active'); document.body.style.overflow = ''; }
+
+  document.getElementById('lightbox-close')?.addEventListener('click', closeLB);
+  lb?.addEventListener('click', e => { if (e.target === lb) closeLB(); });
+  document.getElementById('lightbox-prev')?.addEventListener('click', () => { iIdx = (iIdx - 1 + imgs.length) % imgs.length; showLB(iIdx); });
+  document.getElementById('lightbox-next')?.addEventListener('click', () => { iIdx = (iIdx + 1) % imgs.length; showLB(iIdx); });
+
+  document.addEventListener('keydown', e => {
+    if (!lb?.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLB();
+    if (e.key === 'ArrowLeft') document.getElementById('lightbox-prev')?.click();
+    if (e.key === 'ArrowRight') document.getElementById('lightbox-next')?.click();
+  });
+
+  // Touch swipe lightbox
+  let touchX = 0;
+  lb?.addEventListener('touchstart', e => { touchX = e.changedTouches[0].screenX; }, { passive: true });
+  lb?.addEventListener('touchend', e => {
+    const diff = touchX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) document.getElementById('lightbox-next')?.click();
+      else document.getElementById('lightbox-prev')?.click();
+    }
+  });
+
+  // VIDEO OVERLAY
+  const vOverlay = document.getElementById('video-overlay');
+  const vid = document.getElementById('perahera-video');
+  if (vOverlay && vid) {
+    vOverlay.addEventListener('click', () => { vOverlay.style.display = 'none'; vid.play(); });
+    vid.addEventListener('pause', () => { vOverlay.style.display = 'flex'; });
+    vid.addEventListener('play', () => { vOverlay.style.display = 'none'; });
+  }
+
+  // AUDIO TOGGLE
+  const audioBtn = document.getElementById('audio-toggle-btn');
+  const audio = document.getElementById('bg-audio');
+  if (audioBtn && audio) {
+    let playing = false;
+    audioBtn.addEventListener('click', () => {
+      if (playing) { audio.pause(); audioBtn.style.color = 'var(--text-muted)'; }
+      else { audio.play().catch(() => {}); audioBtn.style.color = 'var(--accent)'; }
+      playing = !playing;
+    });
+  }
+
+  // CONTACT FORM
+  document.getElementById('perahera-contact-form')?.addEventListener('submit', e => {
+    e.preventDefault();
+    alert('ඔබගේ පණිවිඩය ලැබිණි. ස්තූතියි! 🙏\nYour message received. Thank you!');
+    e.target.reset();
+  });
+
+  // SCROLL REVEAL
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
 </body>
 </html>
